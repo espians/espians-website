@@ -1,0 +1,18 @@
+# Public Domain (-) 2014 The Espians Website Authors.
+# See the Espians Website UNLICENSE file for details.
+
+generate:
+
+- site.js:
+    source:
+        - https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.6/d3.js
+        - js/nodes.js
+        - coffee/site.coffee
+
+- style.css:
+    source:
+        - coffee/style.coffee
+
+output.directory: www/static
+output.hashed: true
+output.manifest: www/assets.json
