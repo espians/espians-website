@@ -14,52 +14,76 @@ const (
 
 var (
 	colorShades = []string{"#f16c6c", "#f13c3c", "#aa2b2b", "#940000"}
+	header      = `<!doctype html>
+<meta charset=utf-8>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-90176-9', 'espians.com'); ga('send', 'pageview');
+</script>`
 )
 
 type Project struct {
-	ID    string
 	Title string
-	Year  int
 	Link  string
 	Text  string
 }
 
 var currentProjects = []*Project{
-	// {
-	//     ID:    "million-dollar-wikihouse",
-	//     Title: "Million Dollar WikiHouse",
-	//     Year:  2014,
-	//     Link:  "https://www.wikifactory.org/campaign/million-dollar-wikihouse",
-	// },
 	{
-		ID:    "wikifactory",
+		Title: "Ampify",
+		Text:  `Set to launch in early 2015, Ampify is a decentralised application platform.`,
+	},
+	{
+		Title: "Million Dollar WikiHouse",
+		// Link:  "https://www.wikifactory.org/campaign/million-dollar-wikihouse",
+	},
+	{
 		Title: "Wikifactory",
-		Year:  2013,
 		Link:  "https://www.wikifactory.org/",
 	},
 	{
-		ID:    "wikihouse",
 		Title: "WikiHouse",
-		Year:  2011,
 		Link:  "http://www.wikihouse.cc/",
+		Text:  `Launched in 2011,`,
 	},
 }
 
 var investments = []*Project{
 	{
-		ID:    "wigwamm",
 		Title: "Wigwamm",
-		Year:  2013,
 		Link:  "http://www.wigwamm.com/",
 	},
 }
 
 var pastProjects = []*Project{
 	{
-		ID:    "icesphere",
+		Title: "Civic Crowd",
+		Text:  ``,
+	},
+	{
+		Title: "Efpee Riva",
+		Text:  ``,
+	},
+	{
 		Title: "IceSphere",
-		Year:  2000,
 		Link:  "",
+		Text: `One of our first acquihires, Icesphere was a replacement desktop interface
+        for Microsoft Windows. Its powerful block-based component model Python-based IceScript.`,
+	},
+}
+
+var supportedProjects = []*Project{
+	{
+		Title: "Social Startup Labs",
+		Text:  ``,
+	},
+	{
+		Title: "United Diversity",
+		Link:  "http://uniteddiversity.coop/",
+		Text:  ``,
 	},
 }
 
