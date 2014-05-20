@@ -26,9 +26,13 @@ var (
 )
 
 type Project struct {
-	Title string
-	Link  string
-	Text  string
+	Title    string
+	Link     string
+	Text     string
+	Twitter  string
+	Facebook string
+	GitHub   string
+	Year     int
 }
 
 var currentProjects = []*Project{
@@ -36,10 +40,10 @@ var currentProjects = []*Project{
 		Title: "Ampify",
 		Text:  `Set to launch in early 2015, Ampify is a decentralised application platform.`,
 	},
-	{
-		Title: "Million Dollar WikiHouse",
-		// Link:  "https://www.wikifactory.org/campaign/million-dollar-wikihouse",
-	},
+//	{
+//		Title: "Million Dollar WikiHouse",
+//		 Link:  "https://www.wikifactory//.org/campaign/million-dollar-wikihouse",
+//	},
 	{
 		Title: "Wikifactory",
 		Link:  "https://www.wikifactory.org/",
@@ -59,8 +63,21 @@ var investments = []*Project{
 }
 
 var pastProjects = []*Project{
+	
+	{
+		Title: "Atlas",
+		Text:  ``,
+	},
 	{
 		Title: "Civic Crowd",
+		Text:  ``,
+	},
+	{
+		Title: "TrustMaps",
+		Text:  ``,
+	},
+	{
+		Title: "OpenCoin",
 		Text:  ``,
 	},
 	{
@@ -72,6 +89,45 @@ var pastProjects = []*Project{
 		Link:  "",
 		Text: `One of our first acquihires, Icesphere was a replacement desktop interface
         for Microsoft Windows. Its powerful block-based component model Python-based IceScript.`,
+	},
+	{
+		Title: "Civic Crowd",
+		Text:  ``,
+		Year: 2006,
+	},
+	{
+		Title: "PlexNews",
+		Text:  `An RSS aggregator of wikis - before `,
+	},
+	{
+		Title: "WorldWideWiki",
+		Text:  `Created to create `,
+	},
+	{
+		Title: "Xnet",
+		Text:  `A programmable wiki built for collaboration. It enabled task management, blogging and team`,
+		Year:
+	},
+	{
+		Title: "United Diversity",
+		Text:  ``,
+		Year: 2002,
+	},
+
+	{
+		Title: "Esp Setup",
+		Text:  ``,
+		Year: 2000,
+	},
+	{
+		Title: "Espra File Sharing",
+		Text:  ``,
+		Year: 2000,
+	},	
+	{
+		Title: "Advue",
+		Text:  ``,
+		Year: 1999,
 	},
 }
 
@@ -90,20 +146,23 @@ var supportedProjects = []*Project{
 type Espian struct {
 	ID       string
 	Name     string
-	Blog     string
+	Text     string
+	Link     string
 	GitHub   string
 	LinkedIn string
 	Twitter  string
+	Skype    string
 }
 
 var activeEspians = []*Espian{
 	{
 		ID:       "tav",
 		Name:     "tav",
-		Blog:     "http://tav.espians.com/",
+		Link:     "http://tav.espians.com/",
 		GitHub:   "tav",
 		LinkedIn: "uk.linkedin.com/in/asktav",
 		Twitter:  "tav",
+		Text:     "",
 	},
 	{
 		ID:       "tom",
@@ -111,31 +170,43 @@ var activeEspians = []*Espian{
 		GitHub:   "salfield",
 		LinkedIn: "uk.linkedin.com/pub/tom-salfield/19/893/258",
 		Twitter:  "tsalfield",
+		Text:     "",
 	},
 	{
 		ID:       "christina",
 		Name:     "Christina Rebel",
 		LinkedIn: "uk.linkedin.com/in/christinarebel",
 		Twitter:  "christina_rebel",
+		Text:     "",
 	},
 	{
 		ID:       "max",
 		Name:     "Max Kampik",
 		LinkedIn: "uk.linkedin.com/in/maximiliankampik",
 		Twitter:  "mkampik",
+		Text:     "",
 	},
 	{
 		ID:      "micrypt",
 		Name:    "Ṣeyi Ogunyẹ́mi",
-		Blog:    "http://micrypt.com/",
+		Link:    "http://micrypt.com/",
 		GitHub:  "micrypt",
 		Twitter: "micrypt",
+		Text:     "",
 	},
 	{
 		ID:       "alice",
 		Name:     "Alice Fung",
 		LinkedIn: "uk.linkedin.com/pub/alice-fung/13/932/954",
 		Twitter:  "00alice",
+		Text:     "",
+	},
+	{
+		ID:       "osb",
+		Name:     "Oliver Sylvester-Bradley",
+		LinkedIn: "uk.linkedin.com/in/olisb",
+		Twitter:  "defactodesign",
+		Text:     "",
 	},
 	// {
 	// 	ID:       "",
@@ -147,13 +218,26 @@ var activeEspians = []*Espian{
 	// },
 }
 
-var lostEspians = []*Espian{
+var advisory = []*Espian{
+//	{
+//		ID:       "bauwens",
+//		Name:     "Michel Bauwens",
+//		Link:     "http://p2pfoundation.net/Michel_Bauwens/",
+//		LinkedIn: "th.linkedin.com/in/mbauwens",
+//		Twitter:  "mbauwens",
+	},
 	{
-		ID:      "aaronsw",
-		Name:    "Aaron Swartz",
-		Blog:    "http://www.aaronsw.com/",
-		GitHub:  "aaronsw",
-		Twitter: "aaronsw",
+		ID:       "peitersen",
+		Name:     "Nicolai Peitersen",
+		Link:     "http://www.amazon.co.uk/The-Ethical-Economy-Rebuilding-Crisis/dp/0231152647",
+		LinkedIn: "cn.linkedin.com/pub/nicolai-peitersen/0/904/852",
+		Twitter:  "NPeitersen",
+	},
+	{
+		ID:       "rheingold",
+		Name:     "Howard Rheingold",
+		Link:     "http://rheingold.com/",
+		Twitter:  "hrheingold",
 	},
 }
 
