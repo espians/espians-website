@@ -176,7 +176,7 @@ var activeEspians = []*Person{
 		LinkedIn: "in/asktav",
 		Skype:    "tavespian",
 		Twitter:  "tav",
-		Text:     ``,
+		Text:     `Systems designer, visionary entrepreneur and aspiring polymath. Spends his time innovating on the cutting edge of social, economic and technological systems.`,
 	},
 	{
 		ID:       "tom",
@@ -185,7 +185,7 @@ var activeEspians = []*Person{
 		LinkedIn: "pub/tom-salfield/19/893/258",
 		Skype:    "tomsalfield",
 		Twitter:  "tsalfield",
-		Text:     ``,
+		Text:     `Technical architect and software developer that is passionate about employingP2P technologies to solve systemic problems and bring about a more open, sustainable economy.`,
 	},
 	{
 		ID:       "christina",
@@ -193,7 +193,7 @@ var activeEspians = []*Person{
 		LinkedIn: "in/christinarebel",
 		Skype:    "christina.rebel.88",
 		Twitter:  "christina_rebel",
-		Text:     ``,
+		Text:     `Constantly building on her range of skillsets - from web development to illustration, strategic planning to video production, and more - to see social innovation projects through early stages and beyond.`,
 	},
 	{
 		ID:       "max",
@@ -201,7 +201,7 @@ var activeEspians = []*Person{
 		LinkedIn: "in/maximiliankampik",
 		Skype:    "maxi.kampik",
 		Twitter:  "mkampik",
-		Text:     ``,
+		Text:     `Investigative and vocal about the latest technologies and innovations, he’s very fast in converting his passion into web development, business and communications skills.`,
 	},
 	{
 		ID:      "micrypt",
@@ -210,7 +210,7 @@ var activeEspians = []*Person{
 		GitHub:  "micrypt",
 		Skype:   "micrypt",
 		Twitter: "micrypt",
-		Text:    ``,
+		Text:    `Designer, programmer and languages geek. A student of life based in London, seeking ways to harness technology, design, and the scientific method to benefit humankind.`,
 	},
 	{
 		ID:       "alice",
@@ -218,7 +218,7 @@ var activeEspians = []*Person{
 		LinkedIn: "pub/alice-fung/13/932/954",
 		Skype:    "alfung4870",
 		Twitter:  "00alice",
-		Text:     ``,
+		Text:     `Trained and experienced as an architect and a social venture developer, leading her to launch innovative workspace environments and social innovation incubators.`,
 	},
 	{
 		ID:       "osb",
@@ -226,7 +226,7 @@ var activeEspians = []*Person{
 		LinkedIn: "in/olisb",
 		Skype:    "oli-s-b",
 		Twitter:  "defactodesign",
-		Text:     ``,
+		Text:     `Always takes an incisive, refreshing approach to growing ethical brands and startups with his marketing, web and print design, and business development skills.`,
 	},
 }
 
