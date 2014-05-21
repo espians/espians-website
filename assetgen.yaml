@@ -13,6 +13,13 @@ generate:
     source:
         - coffee/style.coffee
 
+css.embed: false
+
 output.directory: www/static
 output.hashed: true
-output.manifest: www/assets.json
+output.manifest: assets.json
+
+profile.dev:
+  css.compress: false
+  js.compress: false
+  output.hashed: false
