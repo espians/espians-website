@@ -32,8 +32,8 @@
         .gravity(0.0004)
         .on("tick", tick);
 
-    var svg = d3.select("#jumbotron").append("svg")
-        .attr('id', 'node-canvas')
+    var svg = d3.select("#network").append("svg")
+        .attr('id', 'nodes')
         .attr("width", width)
         .attr("height", height)
 
@@ -76,7 +76,9 @@
             distances.push(dist)
         }
         distances.sort(d3.ascending);
-        for (i = 0; i < 3; i++) {
+        var n = Math.floor(Math.random() * (5 - 2 + 1) + 2);
+        // var n = 3;
+        for (i = 0; i < n; i++) {
             var dist = distances[i]
             var target = distMap[dist].pop()
             var link  = {
@@ -88,7 +90,6 @@
         restart();
     }
 
-
     function tick() {
         link.attr("x1", function(d) { return d.source.x; })
             .attr("y1", function(d) { return d.source.y; })
@@ -98,12 +99,11 @@
             .attr("cy", function(d) { return d.y; });
     }
 
-
     function restart() {
         node = node.data(nodes);
         node.enter().insert("circle", ".cursor")
             .attr("class", "node")
-            .attr("r", 12)
+            .attr("r", 9)
             .attr("id", function (d, i) {
                 return ("id_" + i)
             })
@@ -127,20 +127,19 @@
     root.onresize = resize;
 
     function resize() {
-        var nodeC = document.getElementById('node-canvas');
+        var nodeC = document.getElementById('nodes');
             wW = root.innerWidth;
         nodeC.style.left = ((wW - width) / 2 ) + 'px';
     }
 
-    // kick things off
     function init() {
         restart();
         for (i=0;i<numberNodes;i++) {
-            setTimeout(createLink, 700*i+1000, i);
+            setTimeout(createLink, 20*i+10, i);
+            // setTimeout(createLink, 700*i+1000, i);
         }
     }
 
-    root.Nodes = {};
-    root.Nodes.init = init;
+    init();
 
 })(window);
