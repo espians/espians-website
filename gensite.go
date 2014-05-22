@@ -286,8 +286,13 @@ func main() {
 	}
 
 	buf := &bytes.Buffer{}
-	o := func(s string) {
-		buf.WriteString(s + "\n")
+	o := func(s string, args ...interface{}) {
+		s += "\n"
+		if len(args) > 1 {
+			fmt.Fprintf(buf, s, args...)
+		} else {
+			buf.WriteString(s)
+		}
 	}
 
 	o(header)
@@ -323,19 +328,22 @@ func main() {
 
 	section("Clients")
 
-	renderPerson := func(p *Person) {
+	renderPerson := func(p *Person, displayEmail bool) {
 		o("<h3>" + p.Name + "</h3>")
 		o("<p>" + p.Text + "</p>")
+		if displayEmail {
+			o(`Email: <a href="mailto:%s@espians.com">%s@espians.com</a>`, p.ID, p.ID)
+		}
 	}
 
 	section("Team")
 	for _, espian := range activeEspians {
-		renderPerson(espian)
+		renderPerson(espian, true)
 	}
 
 	section("Board of Advisors")
 	for _, advisor := range advisoryBoard {
-		renderPerson(advisor)
+		renderPerson(advisor, false)
 	}
 
 	section("Contact Us")
