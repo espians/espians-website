@@ -50,6 +50,7 @@ type Project struct {
 	GitHub   string
 	Twitter  string
 	Text     string
+	Image    string
 }
 
 var currentProjects = []*Project{
@@ -60,7 +61,8 @@ var currentProjects = []*Project{
 		Facebook: "WikiHouse",
 		GitHub:   "tav/wikihouse-plugin",
 		Twitter:  "wikihouse",
-		Text:     `Launched in 2011,`,
+		Text:     `WikiHouse is an open source construction set for digitally fabricated houes that we created in collaboration with 00:/, an architectural practice, to enable anyone to design, download, print and assemble a house with minimal formal skill.`,
+		Image:    "https://www.domusweb.it/content/dam/domusweb/en/architecture/2012/06/19/wikihouse-open-source-housing/big_386814_3418_wikihouse-finali-41.jpg",
 	},
 	{
 		Title:    "Wikifactory",
@@ -297,6 +299,7 @@ func main() {
 
 	o(header)
 	o("<link rel=stylesheet href=" + getPath("style.css") + ">")
+	o("<link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700|Merriweather+Sans:400,300' rel='stylesheet' type='text/css'>")
 	o("<div class=wrapper>")
 	o("<h1>Espians</h1>")
 	o("</div>")
@@ -310,8 +313,20 @@ func main() {
 	}
 
 	renderProject := func(p *Project) {
+		o("<div class=card>")
+		o("<div class=card-img>")
+		o("<a href=" + p.Link + ">" + "<img src=" + p.Image + ">" + "</a>")
+    o("</div>")
+		o("<div class=card-text>")
 		o("<h3>" + p.Title + "</h3>")
 		o("<p>" + p.Text + "</p>")
+    o("</div>")
+		o("<div class=card-smedia>")
+		o("<div class=icon>" + "<a href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")
+		o("<div class=icon>" + "<a href=https://www.facebook.com/" + p.Facebook + ">" + "<img src=http://www.yanickdery.com/social/facebook-icon.png>" + "</a>" + "</div>")
+    o("<div class=icon>" + "<a href=https://github.com/" + p.GitHub + ">" + "<img src=http://www.iconsdb.com/icons/download/black/github-6-512.png>" + "</a>" + "</div>")
+		o("</div>")
+		o("</div>")
 	}
 
 	section("Current Projects")
@@ -329,8 +344,17 @@ func main() {
 	section("Clients")
 
 	renderPerson := func(p *Person, displayEmail bool) {
-		o("<h3>" + p.Name + "</h3>")
-		o("<p>" + p.Text + "</p>")
+		o("<div class=card>")
+		o("<div class=card-img>")
+		o("</div>")
+		o("<div class=card-text>")
+    o("<h3>" + p.Name + "</h3>")
+    o("<p>" + p.Text + "</p>")
+		o("</div>")
+		o("<div class=card-smedia>")
+		o("<div class=icon>" + "<a href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")
+		o("</div>")
+		o("</div>")
 		if displayEmail {
 			o(`Email: <a href="mailto:%s@espians.com">%s@espians.com</a>`, p.ID, p.ID)
 		}

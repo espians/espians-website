@@ -14,6 +14,27 @@ module.exports = (api) ->
             background: '#fff'
             margin: 0
             padding: 0
+            lineHeight: 1.4
+
+        h2:
+            fontFamily: 'Merriweather'
+            fontSize: '24px'
+            fontWeight: 700
+            lineHeight: 1.4
+
+        h3:
+            fontFamily:'Merriweather Sans'
+            fontSize: '21px'
+            fontWeight: 400
+            lineHeight: 1.4
+            marginBottom: 0
+
+        p:
+            fontFamily: 'Merriweather'
+            fontSize:'14px'
+            fontWeight: 300
+            padding: 0
+            margin: 0
 
         '#network':
             backgroundColor: '#939393'
@@ -66,3 +87,49 @@ module.exports = (api) ->
         '.wrapper':
             margin: '0 auto'
             width: '900px'
+
+        '.card':
+            position: 'relative'
+            height: '450px'
+            width: '300px'
+            backgroundColor: '#f2f2f2'
+            borderBottom: '2px solid #e5e5e6'
+            webkitTransitionDuration: '500ms'
+            webkitTransitionProperty: 'border'
+            webkitTransitionTimingFunction: 'ease-in-out'
+            marginBottom: '20px'
+
+         '.card-img':
+            width: '300px'
+            height: '190px'
+            backgroundColor: '#e5e5e6'
+
+         '.card-text':
+            marginLeft: '20px'
+            marginRight: '20px'
+
+         '.card-text>h3':
+            marginBottom: '12px'
+
+         img:
+            width: '100%'
+
+         ul:
+           listStyle: 'none'
+
+         li:
+           display: 'inline-block'
+           clear: 'left'
+
+         '.card-smedia':
+           position: 'absolute'
+           bottom: 0
+           right: 0
+           width: '85px'
+           height: '30px'
+
+         '.icon':
+            width: '24px'
+            paddingRight: '4px'
+            float: 'Left'
+            opacity: 0.5
