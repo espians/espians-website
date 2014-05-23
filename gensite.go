@@ -40,6 +40,7 @@ type Person struct {
 	Skype    string
 	Twitter  string
 	Text     string
+	Image    string
 }
 
 type Project struct {
@@ -196,6 +197,7 @@ var activeEspians = []*Person{
 		Skype:    "christina.rebel.88",
 		Twitter:  "christina_rebel",
 		Text:     ``,
+		Image:    "http://www.iwomentv.net/wp-content/uploads/2014/01/Christina-Rebel-2pueblo.jpg",
 	},
 	{
 		ID:       "max",
@@ -346,6 +348,7 @@ func main() {
 	renderPerson := func(p *Person, displayEmail bool) {
 		o("<div class=card>")
 		o("<div class=card-img>")
+		o("<a href=" + p.Link + ">" + "<img src=" + p.Image + ">" + "</a>")
 		o("</div>")
 		o("<div class=card-text>")
     o("<h3>" + p.Name + "</h3>")
