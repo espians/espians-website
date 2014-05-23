@@ -21,6 +21,7 @@ module.exports = (api) ->
             fontSize: '24px'
             fontWeight: 700
             lineHeight: 1.4
+            clear: 'left'
 
         h3:
             fontFamily:'Merriweather Sans'
@@ -35,6 +36,13 @@ module.exports = (api) ->
             fontWeight: 300
             padding: 0
             margin: 0
+
+        a:
+            fontFamily: 'Merriweather'
+            fontSize:'12px'
+            fontWeight: 300
+            color: '#cc0000'
+            textDecoration: 'none'
 
         '#network':
             backgroundColor: '#939393'
@@ -86,7 +94,8 @@ module.exports = (api) ->
 
         '.wrapper':
             margin: '0 auto'
-            width: '900px'
+            width: '990px'
+            clear: 'left'
 
         '.card':
             position: 'relative'
@@ -94,10 +103,17 @@ module.exports = (api) ->
             width: '300px'
             backgroundColor: '#f2f2f2'
             borderBottom: '2px solid #e5e5e6'
-            webkitTransitionDuration: '500ms'
-            webkitTransitionProperty: 'border'
-            webkitTransitionTimingFunction: 'ease-in-out'
+            WebkitTransitionDuration: '500ms'
+            WebkitTransitionProperty: 'border'
+            WebkitTransitionTimingFunction: 'ease-in-out'
             marginBottom: '20px'
+            display: 'inline-block'
+            float: 'left'
+            marginLeft: '15px'
+            marginRight: '15px'
+
+         '.card:hover':
+            borderBottom: '2px solid #cc0000'
 
          '.card-img':
             width: '300px'
@@ -111,8 +127,12 @@ module.exports = (api) ->
          '.card-text>h3':
             marginBottom: '12px'
 
+         '.card-email':
+            marginTop: '12px'
+
          img:
             width: '100%'
+            height: '100%'
 
          ul:
            listStyle: 'none'
@@ -127,9 +147,17 @@ module.exports = (api) ->
            right: 0
            width: '85px'
            height: '30px'
+           paddingTop: 0
+           marginTop: 0
+
+         '#person-smedia':
+           width: '113px'
 
          '.icon':
             width: '24px'
             paddingRight: '4px'
             float: 'Left'
             opacity: 0.5
+
+          '.icon:hover':
+            opacity: 1
