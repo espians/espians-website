@@ -150,9 +150,6 @@ module.exports = (api) ->
            paddingTop: 0
            marginTop: 0
 
-         '#person-smedia':
-           width: '113px'
-
          '.icon':
             width: '24px'
             paddingRight: '4px'
@@ -161,3 +158,30 @@ module.exports = (api) ->
 
           '.icon:hover':
             opacity: 1
+
+          '.person-card':
+            position: 'relative'
+            height: '450px'
+            width: '300px'
+            marginBottom: '20px'
+            display: 'inline-block'
+            float: 'left'
+            marginLeft: '15px'
+            marginRight: '15px'
+
+          '.avatar':
+            borderRadius: '50%'
+            width: '190px'
+            height: '190px'
+            marginLeft: '50px'
+            marginRight: '50px'
+
+          '.person-card>*':
+            textAlign: 'center'
+
+          '.person-smedia':
+            width: '112px'
+            marginLeft: '98px'
+            marginRight: '90px'
+            height: '30px'
+            marginTop: '12px'

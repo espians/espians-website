@@ -180,6 +180,7 @@ var activeEspians = []*Person{
 		Skype:    "tavespian",
 		Twitter:  "tav",
 		Text:     `Systems designer, visionary entrepreneur and aspiring polymath. Spends his time innovating on the cutting edge of social, economic and technological systems.`,
+		Image:    "http://www.moshik.net/admin/App_Upload/Moshik-Hebrew-Typeface-Tav.jpg",
 	},
 	{
 		ID:       "tom",
@@ -188,7 +189,8 @@ var activeEspians = []*Person{
 		LinkedIn: "pub/tom-salfield/19/893/258",
 		Skype:    "tomsalfield",
 		Twitter:  "tsalfield",
-		Text:     `Technical architect and software developer that is passionate about employingP2P technologies to solve systemic problems and bring about a more open, sustainable economy.`,
+		Text:     `Technical architect and software developer that is passionate about employing P2P and open source technologies to solve systemic problems and bring about a more open, sustainable economy.`,
+		Image:    "http://uniteddiversity.coop/wp-content/uploads/sites/2/2012/12/profile.png",
 	},
 	{
 		ID:       "christina",
@@ -197,15 +199,16 @@ var activeEspians = []*Person{
 		Skype:    "christina.rebel.88",
 		Twitter:  "christina_rebel",
 		Text:     `Constantly building on her range of skillsets - from web development to illustration, strategic planning to video production, and more - to see social innovation projects through early stages and beyond.`,
-		Image:    "http://www.iwomentv.net/wp-content/uploads/2014/01/Christina-Rebel-2pueblo.jpg",
+		Image:    "http://www.f6s.com/pictures/profiles/27/2637/263614_half.jpg",
 	},
 	{
 		ID:       "max",
-		Name:     "Max Kampik",
+		Name:     "Maximilian Kampik",
 		LinkedIn: "in/maximiliankampik",
 		Skype:    "maxi.kampik",
 		Twitter:  "mkampik",
 		Text:     `Investigative and vocal about the latest technologies and innovations, he’s very fast in converting his passion into web development, business and communications skills.`,
+		Image:    "https://pbs.twimg.com/profile_images/428915560663904256/LIHeAklZ_400x400.png",
 	},
 	{
 		ID:      "micrypt",
@@ -215,6 +218,7 @@ var activeEspians = []*Person{
 		Skype:   "micrypt",
 		Twitter: "micrypt",
 		Text:    `Designer, programmer and languages geek. A student of life based in London, seeking ways to harness technology, design, and the scientific method to benefit humankind.`,
+		Image:   "https://pbs.twimg.com/profile_images/378800000853883697/e70eaf8093814f93c89a3e1e07ba8c66_400x400.png",
 	},
 	{
 		ID:       "alice",
@@ -222,7 +226,8 @@ var activeEspians = []*Person{
 		LinkedIn: "pub/alice-fung/13/932/954",
 		Skype:    "alfung4870",
 		Twitter:  "00alice",
-		Text:     `Trained and experienced as an architect and a social venture developer, leading her to launch innovative workspace environments and social innovation incubators.`,
+		Text:     `Trained as an architect as well as experienced as a social venture developer, leading her to launch several innovative workspace environments and social innovation incubators.`,
+		Image:    "https://lh3.googleusercontent.com/-o03j_uebeNI/AAAAAAAAAAI/AAAAAAAAAAA/tOM653TY0vo/photo.jpg",
 	},
 	{
 		ID:       "osb",
@@ -231,6 +236,7 @@ var activeEspians = []*Person{
 		Skype:    "oli-s-b",
 		Twitter:  "defactodesign",
 		Text:     `Always takes an incisive, refreshing approach to growing ethical brands and startups with his marketing, web and print design, and business development skills.`,
+		Image:    "http://arbores.co.uk/sites/arbores.co.uk/themes/danland/images/oli.png",
 	},
 }
 
@@ -346,9 +352,9 @@ func main() {
 	section("Clients")
 
 	renderPerson := func(p *Person, displayEmail bool) {
-		o("<div class=card>")
-		o("<div class=card-img>")
-		o("<a href=" + p.Link + ">" + "<img src=" + p.Image + ">" + "</a>")
+		o("<div class=person-card>")
+		o("<div class=person-img>")
+		o("<a href=" + p.Link + ">" + "<img class=avatar src=" + p.Image + ">" + "</a>")
 		o("</div>")
 		o("<div class=card-text>")
     o("<h3>" + p.Name + "</h3>")
@@ -358,9 +364,9 @@ func main() {
 			o(`<a href="mailto:%s@espians.com">%s@espians.com</a>`, p.ID, p.ID)
 			o("</div>")
 		o("</div>")
-		o("<div class=card-smedia id=person-smedia>")
+		o("<div class=person-smedia>")
 		o("<div class=icon>" + "<a href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")
-    o("<div class=icon>" + "<a href=https://www.linkedin.com/in/" + p.LinkedIn + ">" + "<img src=https://cdn1.iconfinder.com/data/icons/simple-icons/2048/linkedin-2048-black.png>" + "</a>" + "</div>")
+    o("<div class=icon>" + "<a href=https://www.linkedin.com/" + p.LinkedIn + ">" + "<img src=https://cdn1.iconfinder.com/data/icons/simple-icons/2048/linkedin-2048-black.png>" + "</a>" + "</div>")
 	  o("<div class=icon>" + "<a href=https://github.com/" + p.GitHub + ">" + "<img src=http://www.iconsdb.com/icons/download/black/github-6-512.png>" + "</a>" + "</div>")
 		o("<div class=icon>" + "<a href=http://twitter.com/" + p.Skype + ">" + "<img src=http://www.iconsdb.com/icons/download/black/skype-256.png>" + "</a>" + "</div>")
 		o("</div>")
