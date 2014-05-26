@@ -16,11 +16,19 @@ module.exports = (api) ->
             padding: 0
             lineHeight: 1.4
 
+        h1:
+            fontFamily: 'Montserrat'
+            fontWeight: '400'
+            fontSize: '17px'
+            color: '#2b2b2b'
+            letterSpacing: '0.8px'
+
         h2:
             fontFamily: 'Merriweather'
-            fontSize: '24px'
+            fontSize: '26px'
             fontWeight: 700
             lineHeight: 1.4
+            color: '#2b2b2b'
             clear: 'left'
             textAlign: 'center'
             marginTop: '40px'
@@ -99,13 +107,52 @@ module.exports = (api) ->
             width: '990px'
             clear: 'left'
 
+        '#full-logo':
+            display: 'inline-block'
+            width: '300px'
+            marginTop: '5px'
+            marginBottom: '2px'
+
+        '.logo':
+            width: '38px'
+            float: 'left'
+            marginRight: '5px'
+            paddingTop: '3px'
+
         '#tagline':
             fontFamily: 'Merriweather Sans'
-            fontSize: '24px'
+            fontSize: '32px'
             fontWeight: 400
             lineHeight: 1.4
-            zIndex: 1
-            marginTop: '340px'
+            textShadow: '1px 1px 3px #2b2b2b'
+            marginTop: '170px'
+            position: 'relative'
+            zIndex: 20
+
+        '#calltoaction':
+            fontFamily: 'Merriweather Sans'
+            fontSize: '26px'
+            color: '#2b2b2b'
+            fontWeight: 400
+            lineHeight: 1.4
+            backgroundColor: 'rgba(250,250,250,0.6)'
+            position: 'relative'
+            zIndex: 20
+            border: '1px solid #bbb'
+            padding: '5px 10px'
+            textAlign: 'center'
+            marginTop: '40px'
+            marginLeft: 'auto'
+            marginRight: 'auto'
+            width: '180px'
+            height: '50px'
+            WebkitTransitionDuration: '500ms'
+            WebkitTransitionProperty: 'border,color'
+            WebkitTransitionTimingFunction: 'ease-in-out'
+
+        '#calltoaction:hover':
+            border: '1px solid #cc0000'
+            color: '#cc0000'
 
         '.card':
             position: 'relative'

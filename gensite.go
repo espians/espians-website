@@ -13,7 +13,8 @@ import (
 
 const (
 	outputDirectory = "www"
-	tagline         = "We are building the foundation for the post-industrial future. Join us!"
+	tagline         = "We are building the foundations for the post-industrial future."
+	calltoaction    = "Join us!"
 )
 
 var (
@@ -66,7 +67,7 @@ var currentProjects = []*Project{
 		Image:    "https://www.domusweb.it/content/dam/domusweb/en/architecture/2012/06/19/wikihouse-open-source-housing/big_386814_3418_wikihouse-finali-41.jpg",
 	},
 	{
-		Title:    "Wikifactory",
+		Title:    "WikiFactory",
 		Link:     "https://www.wikifactory.org/",
 		Year:     2011,
 		Facebook: "wikifactory",
@@ -307,11 +308,12 @@ func main() {
 
 	o(header)
 	o("<link rel=stylesheet href=" + getPath("style.css") + ">")
-	o("<link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700|Merriweather+Sans:400,300' rel='stylesheet' type='text/css'>")
-	o("<div class=wrapper>")
+	o("<link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700|Merriweather+Sans:300,400|Montserrat:400,700' rel='stylesheet' type='text/css'>")
+	o("<div class=wrapper><div id=full-logo>")
+	o("<div class=logo>" + "<img src=http://i61.tinypic.com/ejfyaq.jpg>" + "</div>")
 	o("<h1>ESPIANS</h1>")
-	o("</div>")
-	o("<div id=network><div class=wrapper id=tagline>" + tagline + "</div></div>")
+	o("</div></div>")
+	o("<div id=network><div class=wrapper id=tagline>" + tagline + "</div>" + "<div class=wrapper id=calltoaction>" + calltoaction + "</div></div>")
 	o("<script src=" + getPath("site.js") + " async></script>")
 	o("<div class=wrapper>")
 
