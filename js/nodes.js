@@ -135,7 +135,7 @@
     function init() {
         restart();
         for (i=0;i<numberNodes;i++) {
-            setTimeout(createLink, 20*i+10, i);
+            setTimeout(createLink, 300*i+1000, i);
             // setTimeout(createLink, 700*i+1000, i);
         }
     }
