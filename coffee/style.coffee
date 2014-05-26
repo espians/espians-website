@@ -79,14 +79,14 @@ module.exports = (api) ->
                 stroke: 'brown'
 
             '.link':
-                stroke: '#bbb'
-                strokeWidth: 1.5
+                stroke: '#cc0000'
+                strokeWidth: 1
                 transitionDuration: '1s'
                 transitionProperty: 'stroke fill'
                 zIndex: 0
 
             '.link.active':
-                stroke: '#dd4e58'
+                stroke: '#cc0000'
                 transitionDuration: '1s'
                 transitionProperty: 'stroke'
 
@@ -147,12 +147,11 @@ module.exports = (api) ->
             width: '180px'
             height: '50px'
             WebkitTransitionDuration: '500ms'
-            WebkitTransitionProperty: 'border,color'
+            WebkitTransitionProperty: 'border'
             WebkitTransitionTimingFunction: 'ease-in-out'
 
         '#calltoaction:hover':
             border: '1px solid #cc0000'
-            color: '#cc0000'
 
         '.card':
             position: 'relative'
