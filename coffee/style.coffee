@@ -22,6 +22,8 @@ module.exports = (api) ->
             fontWeight: 700
             lineHeight: 1.4
             clear: 'left'
+            textAlign: 'center'
+            marginTop: '40px'
 
         h3:
             fontFamily:'Merriweather Sans'
@@ -47,7 +49,7 @@ module.exports = (api) ->
         '#network':
             backgroundColor: '#939393'
             color: '#ffffff'
-            height: '490px'
+            height: '460px'
             overflow: 'hidden'
             position: 'relative'
             paddingBottom: 0
@@ -97,6 +99,14 @@ module.exports = (api) ->
             width: '990px'
             clear: 'left'
 
+        '#tagline':
+            fontFamily: 'Merriweather Sans'
+            fontSize: '24px'
+            fontWeight: 400
+            lineHeight: 1.4
+            zIndex: 1
+            marginTop: '340px'
+
         '.card':
             position: 'relative'
             height: '450px'
@@ -106,7 +116,7 @@ module.exports = (api) ->
             WebkitTransitionDuration: '500ms'
             WebkitTransitionProperty: 'border'
             WebkitTransitionTimingFunction: 'ease-in-out'
-            marginBottom: '20px'
+            marginBottom: '40px'
             display: 'inline-block'
             float: 'left'
             marginLeft: '15px'
