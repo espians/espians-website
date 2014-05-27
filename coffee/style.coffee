@@ -79,14 +79,14 @@ module.exports = (api) ->
                 stroke: 'brown'
 
             '.link':
-                stroke: '#cc0000'
+                stroke: 'rgba(204,0,0,0.6)'
                 strokeWidth: 1
                 transitionDuration: '1s'
                 transitionProperty: 'stroke fill'
                 zIndex: 0
 
             '.link.active':
-                stroke: '#cc0000'
+                stroke: 'rgba(204,0,0,0.9)'
                 transitionDuration: '1s'
                 transitionProperty: 'stroke'
 
