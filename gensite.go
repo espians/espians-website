@@ -64,7 +64,7 @@ var currentProjects = []*Project{
 		Facebook: "WikiHouse",
 		GitHub:   "tav/wikihouse-plugin",
 		Twitter:  "wikihouse",
-		Text:     `WikiHouse is an open source construction set for digitally fabricated houes that we created in collaboration with 00:/, an architectural practice, to enable anyone to design, download, print and assemble a house with minimal formal skill.`,
+		Text:     `<a href="http://wikihouse.cc" target="_blank" title="Open source construction set">WikiHouse</a> is an open source construction set that enables anyone to design, download, print and assemble a house. Founded in collaboration with 00:/ Architects, the WikiHouse project now has chapters in X cities around the World and a <a href="http://www.ted.com/talks/alastair_parvin_architecture_for_the_people_by_the_people" target="_blank" title="Architecture for the people by the people">TED talk</a> with over a million views.`,
 		Image:    "https://www.domusweb.it/content/dam/domusweb/en/architecture/2012/06/19/wikihouse-open-source-housing/big_386814_3418_wikihouse-finali-41.jpg",
 	},
 	{
@@ -105,15 +105,15 @@ var investments = []*Project{
 var pastProjects = []*Project{
 
 	{
-		Title: "Atlas",
-		Text:  ``,
-		Year:  2012,
+		Title:    "Atlas",
+		Text:     ``,
+		Year:     2012,
 		Position: 1,
 	},
 	{
-		Title: "Civic Crowd",
-		Text:  ``,
-		Year:  2012,
+		Title:    "Civic Crowd",
+		Text:     ``,
+		Year:     2012,
 		Position: 2,
 	},
 	{
@@ -329,75 +329,75 @@ func main() {
 	}
 
 	renderProject := func(p *Project, displayCurrent bool, displayPast bool) {
-    if displayCurrent {
-		o("<div class=card>")
-		o("<div class=card-img>")
-		o("<a href=" + p.Link + ">" + "<img src=" + p.Image + ">" + "</a>")
-    o("</div>")
-		o("<div class=card-text>")
-		o("<h3>" + p.Title + "</h3>")
-		o("<p>" + p.Text + "</p>")
-    o("</div>")
-		o("<div class=card-followus>")
-		o("<p>Follow us:</p>")
-		o("</div>")
-		o("<div class=card-smedia>")
-		o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")
-		o("<div class=icon>" + "<a target=_blank href=https://www.facebook.com/" + p.Facebook + ">" + "<img src=http://www.yanickdery.com/social/facebook-icon.png>" + "</a>" + "</div>")
-    o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=http://www.iconsdb.com/icons/download/black/github-6-512.png>" + "</a>" + "</div>")
-		o("</div>")
-		o("</div>")
-	  }
+		if displayCurrent {
+			o("<div class=card>")
+			o("<div class=card-img>")
+			o("<a href=" + p.Link + ">" + "<img src=" + p.Image + ">" + "</a>")
+			o("</div>")
+			o("<div class=card-text>")
+			o("<h3>" + p.Title + "</h3>")
+			o("<p>" + p.Text + "</p>")
+			o("</div>")
+			o("<div class=card-followus>")
+			o("<p>Follow us:</p>")
+			o("</div>")
+			o("<div class=card-smedia>")
+			o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")
+			o("<div class=icon>" + "<a target=_blank href=https://www.facebook.com/" + p.Facebook + ">" + "<img src=http://www.yanickdery.com/social/facebook-icon.png>" + "</a>" + "</div>")
+			o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=http://www.iconsdb.com/icons/download/black/github-6-512.png>" + "</a>" + "</div>")
+			o("</div>")
+			o("</div>")
+		}
 		if displayPast {
 			if p.Year == 2012 {
-			o("<div>")
-			if p.Position %2 != 0 {
-				o("<div class=timeline-year>")
-				o("<p>2012</p>")
+				o("<div>")
+				if p.Position%2 != 0 {
+					o("<div class=timeline-year>")
+					o("<p>2012</p>")
+					o("</div>")
+					o("<div class=card-left>")
+					o("<div class=card-timeline>")
+					o("<div class=card-img>")
+					o("<a href=" + p.Link + ">" + "<img src=" + p.Image + ">" + "</a>")
+					o("</div>")
+					o("<div class=card-text>")
+					o("<h3>" + p.Title + "</h3>")
+					o("<p>" + p.Text + "</p>")
+					o("</div>")
+					o("<div class=card-followus>")
+					o("<p>Follow us:</p>")
+					o("</div>")
+					o("<div class=card-smedia>")
+					o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")
+					o("<div class=icon>" + "<a target=_blank href=https://www.facebook.com/" + p.Facebook + ">" + "<img src=http://www.yanickdery.com/social/facebook-icon.png>" + "</a>" + "</div>")
+					o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=http://www.iconsdb.com/icons/download/black/github-6-512.png>" + "</a>" + "</div>")
+					o("</div>")
+					o("</div>")
+					o("</div>")
+				} else {
+					o("<div class=card-right>")
+					o("<div class=card-timeline>")
+					o("<div class=card-img>")
+					o("<a href=" + p.Link + ">" + "<img src=" + p.Image + ">" + "</a>")
+					o("</div>")
+					o("<div class=card-text>")
+					o("<h3>" + p.Title + "</h3>")
+					o("<p>" + p.Text + "</p>")
+					o("</div>")
+					o("<div class=card-followus>")
+					o("<p>Follow us:</p>")
+					o("</div>")
+					o("<div class=card-smedia>")
+					o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")
+					o("<div class=icon>" + "<a target=_blank href=https://www.facebook.com/" + p.Facebook + ">" + "<img src=http://www.yanickdery.com/social/facebook-icon.png>" + "</a>" + "</div>")
+					o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=http://www.iconsdb.com/icons/download/black/github-6-512.png>" + "</a>" + "</div>")
+					o("</div>")
+					o("</div>")
+					o("</div>")
+				}
 				o("</div>")
-				o("<div class=card-left>")
-				o("<div class=card-timeline>")
-				o("<div class=card-img>")
-				o("<a href=" + p.Link + ">" + "<img src=" + p.Image + ">" + "</a>")
-				o("</div>")
-				o("<div class=card-text>")
-				o("<h3>" + p.Title + "</h3>")
-				o("<p>" + p.Text + "</p>")
-				o("</div>")
-				o("<div class=card-followus>")
-				o("<p>Follow us:</p>")
-				o("</div>")
-				o("<div class=card-smedia>")
-				o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")
-				o("<div class=icon>" + "<a target=_blank href=https://www.facebook.com/" + p.Facebook + ">" + "<img src=http://www.yanickdery.com/social/facebook-icon.png>" + "</a>" + "</div>")
-				o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=http://www.iconsdb.com/icons/download/black/github-6-512.png>" + "</a>" + "</div>")
-				o("</div>")
-				o("</div>")
-				o("</div>")
-	   	 } else {
-				o("<div class=card-right>")
-				o("<div class=card-timeline>")
-				o("<div class=card-img>")
-				o("<a href=" + p.Link + ">" + "<img src=" + p.Image + ">" + "</a>")
-				o("</div>")
-				o("<div class=card-text>")
-				o("<h3>" + p.Title + "</h3>")
-				o("<p>" + p.Text + "</p>")
-				o("</div>")
-				o("<div class=card-followus>")
-				o("<p>Follow us:</p>")
-				o("</div>")
-				o("<div class=card-smedia>")
-				o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")
-				o("<div class=icon>" + "<a target=_blank href=https://www.facebook.com/" + p.Facebook + ">" + "<img src=http://www.yanickdery.com/social/facebook-icon.png>" + "</a>" + "</div>")
-				o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=http://www.iconsdb.com/icons/download/black/github-6-512.png>" + "</a>" + "</div>")
-				o("</div>")
-				o("</div>")
-				o("</div>")
-			  }
-			o("</div>")
-		  }
-	  }
+			}
+		}
 	}
 
 	section("Current Projects")
@@ -411,8 +411,8 @@ func main() {
 	}
 
 	section("Past Projects")
-  for _, project := range pastProjects {
-	  renderProject(project, false, true)
+	for _, project := range pastProjects {
+		renderProject(project, false, true)
 	}
 
 	section("Clients")
@@ -423,21 +423,22 @@ func main() {
 		o("<a href=" + p.Link + ">" + "<img class=avatar src=" + p.Image + ">" + "</a>")
 		o("</div>")
 		o("<div class=card-text>")
-    o("<h3>" + p.Name + "</h3>")
-    o("<p>" + p.Text + "</p>")
+		o("<h3>" + p.Name + "</h3>")
+		o("<p>" + p.Text + "</p>")
 		if displayEmail {
-      o("<div class=card-email>")
+			o("<div class=card-email>")
 			o(`<a href="mailto:%s@espians.com">%s@espians.com</a>`, p.ID, p.ID)
 			o("</div>")
 		}
 		o("</div>")
 		o("<div class=person-smedia>")
 		o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")
-    o("<div class=icon>" + "<a target=_blank href=https://www.linkedin.com/" + p.LinkedIn + ">" + "<img src=https://cdn1.iconfinder.com/data/icons/simple-icons/2048/linkedin-2048-black.png>" + "</a>" + "</div>")
-	  o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=http://www.iconsdb.com/icons/download/black/github-6-512.png>" + "</a>" + "</div>")
+		o("<div class=icon>" + "<a target=_blank href=https://www.linkedin.com/" + p.LinkedIn + ">" + "<img src=https://cdn1.iconfinder.com/data/icons/simple-icons/2048/linkedin-2048-black.png>" + "</a>" + "</div>")
+		o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=http://www.iconsdb.com/icons/download/black/github-6-512.png>" + "</a>" + "</div>")
 		o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Skype + ">" + "<img src=http://www.iconsdb.com/icons/download/black/skype-256.png>" + "</a>" + "</div>")
 		o("</div>")
 		o("</div>")
+
 	}
 
 	section("Team")
