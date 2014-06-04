@@ -82,7 +82,7 @@ var currentProjects = []*Project{
 		Year:    2001,
 		GitHub:  "tav/ampify",
 		Twitter: "ampify",
-		Text:    `Set to launch in early 2015, Ampify is a decentralised application platform.`,
+		Text:    `Set to launch in early 2015, Ampify is an open source, decentralised application platform. It will provide a web-application framework to create social apps on top of a secure, decentralised core.`,
 	},
 }
 
@@ -113,12 +113,13 @@ var pastProjects = []*Project{
 	{
 		Title: "Civic Crowd",
 		Text:  ``,
-		Year: 2012,
+		Year:  2012,
 		Position: 2,
 	},
 	{
 		Title: "TrustMaps",
 		Text:  ``,
+		Year:  2011,
 	},
 	{
 		Title: "OpenCoin",
@@ -337,6 +338,9 @@ func main() {
 		o("<h3>" + p.Title + "</h3>")
 		o("<p>" + p.Text + "</p>")
     o("</div>")
+		o("<div class=card-followus>")
+		o("<p>Follow us:</p>")
+		o("</div>")
 		o("<div class=card-smedia>")
 		o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")
 		o("<div class=icon>" + "<a target=_blank href=https://www.facebook.com/" + p.Facebook + ">" + "<img src=http://www.yanickdery.com/social/facebook-icon.png>" + "</a>" + "</div>")
@@ -348,6 +352,9 @@ func main() {
 			if p.Year == 2012 {
 			o("<div>")
 			if p.Position %2 != 0 {
+				o("<div class=timeline-year>")
+				o("<p>2012</p>")
+				o("</div>")
 				o("<div class=card-left>")
 				o("<div class=card-timeline>")
 				o("<div class=card-img>")
@@ -356,6 +363,9 @@ func main() {
 				o("<div class=card-text>")
 				o("<h3>" + p.Title + "</h3>")
 				o("<p>" + p.Text + "</p>")
+				o("</div>")
+				o("<div class=card-followus>")
+				o("<p>Follow us:</p>")
 				o("</div>")
 				o("<div class=card-smedia>")
 				o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")
@@ -373,6 +383,9 @@ func main() {
 				o("<div class=card-text>")
 				o("<h3>" + p.Title + "</h3>")
 				o("<p>" + p.Text + "</p>")
+				o("</div>")
+				o("<div class=card-followus>")
+				o("<p>Follow us:</p>")
 				o("</div>")
 				o("<div class=card-smedia>")
 				o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")

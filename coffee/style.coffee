@@ -11,7 +11,7 @@ module.exports = (api) ->
             boxSizing: 'border-box'
 
         body:
-            background: '#fff'
+            background: '#F7F7F7'
             margin: 0
             padding: 0
             lineHeight: 1.4
@@ -24,9 +24,9 @@ module.exports = (api) ->
             letterSpacing: '0.8px'
 
         h2:
-            fontFamily: 'Merriweather'
+            fontFamily: 'Montserrat'
             fontSize: '26px'
-            fontWeight: 700
+            fontWeight: 400
             lineHeight: 1.4
             color: '#2b2b2b'
             clear: 'left'
@@ -53,6 +53,18 @@ module.exports = (api) ->
             fontWeight: 300
             color: '#cc0000'
             textDecoration: 'none'
+
+        '#full-logo':
+            display: 'inline-block'
+            width: '150px'
+            marginTop: '5px'
+            marginBottom: '2px'
+
+        '.logo':
+            width: '38px'
+            float: 'left'
+            marginRight: '5px'
+            paddingTop: '3px'
 
         '#network':
             backgroundColor: '#939393'
@@ -107,18 +119,6 @@ module.exports = (api) ->
             width: '990px'
             clear: 'left'
 
-        '#full-logo':
-            display: 'inline-block'
-            width: '300px'
-            marginTop: '5px'
-            marginBottom: '2px'
-
-        '.logo':
-            width: '38px'
-            float: 'left'
-            marginRight: '5px'
-            paddingTop: '3px'
-
         '#tagline':
             fontFamily: 'Merriweather Sans'
             fontSize: '32px'
@@ -130,6 +130,7 @@ module.exports = (api) ->
             zIndex: 20
 
         '#calltoaction':
+            cursor: 'pointer'
             fontFamily: 'Merriweather Sans'
             fontSize: '26px'
             color: '#2b2b2b'
@@ -197,6 +198,27 @@ module.exports = (api) ->
            display: 'inline-block'
            clear: 'left'
 
+         '.card-followus':
+           position: 'absolute'
+           bottom: 0
+           left: 0
+           width: '300px'
+           height: '30px'
+           paddingTop: 0
+           marginTop: 0
+           zIndex: 1
+
+         '.card-followus>p':
+           fontSize: '14px'
+           fontFamily: 'Montserrat'
+           fontWeight: 400
+           marginLeft: '20px'
+           marginTop: '2px'
+           color: '#f2f2f2'
+
+         '.card-followus:hover>p':
+           color: 'rgba(0,0,0,0.5)'
+
          '.card-smedia':
            position: 'absolute'
            bottom: 0
@@ -205,6 +227,7 @@ module.exports = (api) ->
            height: '30px'
            paddingTop: 0
            marginTop: 0
+           zIndex: 2
 
          '.icon':
             width: '24px'
@@ -214,6 +237,9 @@ module.exports = (api) ->
 
           '.icon:hover':
             opacity: 1
+
+          '.icon:hover + .card-followus':
+            color: 'rgba(0,0,0,0.5)'
 
           '.person-card':
             position: 'relative'
@@ -255,18 +281,35 @@ module.exports = (api) ->
           '.card-timeline:hover':
             borderBottom: '2px solid #cc0000'
 
-           '.card-left':
-             float: 'left'
-             marginLeft: '128px'
-             paddingRight: '65px'
-             borderRight: '2px solid rgba(204,0,0,0.8)'
-             paddingTop: '15px'
-             paddingBottom: '15px'
+          '.timeline-year':
+            width: '75px'
+            height: '26px'
+            backgroundColor: '##F7F7F7'
+            marginLeft: 'auto'
+            marginRight: 'auto'
+            borderBottom: '2px solid rgba(204,0,0,1)'
 
-           '.card-right':
-             float: 'right'
-             marginRight: '128px'
-             paddingLeft: '65px'
-             borderLeft: '2px solid rgba(204,0,0,0.8)'
-             paddingTop: '15px'
-             paddingBottom: '15px'
+          '.timeline-year>p':
+            fontFamily: 'Montserrat'
+            fontWeight: 400
+            fontSize: '16px'
+            color: '#2b2b2b'
+            textAlign: 'center'
+            letterSpacing: '1.2px'
+            paddingTop: '2px'
+
+          '.card-left':
+            float: 'left'
+            marginLeft: '128px'
+            paddingRight: '65px'
+            borderRight: '2px solid #939393'
+            paddingTop: '15px'
+            paddingBottom: '25px'
+
+          '.card-right':
+            float: 'right'
+            marginRight: '128px'
+            paddingLeft: '65px'
+            borderLeft: '2px solid #939393'
+            paddingTop: '15px'
+            paddingBottom: '25px'
