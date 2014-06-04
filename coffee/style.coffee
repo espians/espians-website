@@ -251,4 +251,22 @@ module.exports = (api) ->
             WebkitTransitionDuration: '500ms'
             WebkitTransitionProperty: 'border'
             WebkitTransitionTimingFunction: 'ease-in-out'
-            marginBottom: '40px'
+
+          '.card-timeline:hover':
+            borderBottom: '2px solid #cc0000'
+
+           '.card-left':
+             float: 'left'
+             marginLeft: '128px'
+             paddingRight: '65px'
+             borderRight: '2px solid rgba(204,0,0,0.8)'
+             paddingTop: '15px'
+             paddingBottom: '15px'
+
+           '.card-right':
+             float: 'right'
+             marginRight: '128px'
+             paddingLeft: '65px'
+             borderLeft: '2px solid rgba(204,0,0,0.8)'
+             paddingTop: '15px'
+             paddingBottom: '15px'

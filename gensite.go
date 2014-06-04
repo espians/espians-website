@@ -53,6 +53,7 @@ type Project struct {
 	Twitter  string
 	Text     string
 	Image    string
+	Position int
 }
 
 var currentProjects = []*Project{
@@ -106,10 +107,14 @@ var pastProjects = []*Project{
 	{
 		Title: "Atlas",
 		Text:  ``,
+		Year:  2012,
+		Position: 1,
 	},
 	{
 		Title: "Civic Crowd",
 		Text:  ``,
+		Year: 2012,
+		Position: 2,
 	},
 	{
 		Title: "TrustMaps",
@@ -340,20 +345,45 @@ func main() {
 		o("</div>")
 	  }
 		if displayPast {
-		o("<div class=card-timeline>")
-		o("<div class=card-img>")
-		o("<a href=" + p.Link + ">" + "<img src=" + p.Image + ">" + "</a>")
-		o("</div>")
-		o("<div class=card-text>")
-		o("<h3>" + p.Title + "</h3>")
-		o("<p>" + p.Text + "</p>")
-		o("</div>")
-		o("<div class=card-smedia>")
-		o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")
-		o("<div class=icon>" + "<a target=_blank href=https://www.facebook.com/" + p.Facebook + ">" + "<img src=http://www.yanickdery.com/social/facebook-icon.png>" + "</a>" + "</div>")
-		o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=http://www.iconsdb.com/icons/download/black/github-6-512.png>" + "</a>" + "</div>")
-		o("</div>")
-		o("</div>")
+			if p.Year == 2012 {
+			o("<div>")
+			if p.Position %2 != 0 {
+				o("<div class=card-left>")
+				o("<div class=card-timeline>")
+				o("<div class=card-img>")
+				o("<a href=" + p.Link + ">" + "<img src=" + p.Image + ">" + "</a>")
+				o("</div>")
+				o("<div class=card-text>")
+				o("<h3>" + p.Title + "</h3>")
+				o("<p>" + p.Text + "</p>")
+				o("</div>")
+				o("<div class=card-smedia>")
+				o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")
+				o("<div class=icon>" + "<a target=_blank href=https://www.facebook.com/" + p.Facebook + ">" + "<img src=http://www.yanickdery.com/social/facebook-icon.png>" + "</a>" + "</div>")
+				o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=http://www.iconsdb.com/icons/download/black/github-6-512.png>" + "</a>" + "</div>")
+				o("</div>")
+				o("</div>")
+				o("</div>")
+	   	 } else {
+				o("<div class=card-right>")
+				o("<div class=card-timeline>")
+				o("<div class=card-img>")
+				o("<a href=" + p.Link + ">" + "<img src=" + p.Image + ">" + "</a>")
+				o("</div>")
+				o("<div class=card-text>")
+				o("<h3>" + p.Title + "</h3>")
+				o("<p>" + p.Text + "</p>")
+				o("</div>")
+				o("<div class=card-smedia>")
+				o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")
+				o("<div class=icon>" + "<a target=_blank href=https://www.facebook.com/" + p.Facebook + ">" + "<img src=http://www.yanickdery.com/social/facebook-icon.png>" + "</a>" + "</div>")
+				o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=http://www.iconsdb.com/icons/download/black/github-6-512.png>" + "</a>" + "</div>")
+				o("</div>")
+				o("</div>")
+				o("</div>")
+			  }
+			o("</div>")
+		  }
 	  }
 	}
 
