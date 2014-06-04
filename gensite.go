@@ -322,7 +322,8 @@ func main() {
 		o("<h2 id=" + id + ">" + title + "</h2>")
 	}
 
-	renderProject := func(p *Project) {
+	renderProject := func(p *Project, displayCurrent bool, displayPast bool) {
+    if displayCurrent {
 		o("<div class=card>")
 		o("<div class=card-img>")
 		o("<a href=" + p.Link + ">" + "<img src=" + p.Image + ">" + "</a>")
@@ -337,19 +338,39 @@ func main() {
     o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=http://www.iconsdb.com/icons/download/black/github-6-512.png>" + "</a>" + "</div>")
 		o("</div>")
 		o("</div>")
+	  }
+		if displayPast {
+		o("<div class=card-timeline>")
+		o("<div class=card-img>")
+		o("<a href=" + p.Link + ">" + "<img src=" + p.Image + ">" + "</a>")
+		o("</div>")
+		o("<div class=card-text>")
+		o("<h3>" + p.Title + "</h3>")
+		o("<p>" + p.Text + "</p>")
+		o("</div>")
+		o("<div class=card-smedia>")
+		o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")
+		o("<div class=icon>" + "<a target=_blank href=https://www.facebook.com/" + p.Facebook + ">" + "<img src=http://www.yanickdery.com/social/facebook-icon.png>" + "</a>" + "</div>")
+		o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=http://www.iconsdb.com/icons/download/black/github-6-512.png>" + "</a>" + "</div>")
+		o("</div>")
+		o("</div>")
+	  }
 	}
 
 	section("Current Projects")
 	for _, project := range currentProjects {
-		renderProject(project)
+		renderProject(project, true, false)
 	}
 
 	section("Investments")
 	for _, investment := range investments {
-		renderProject(investment)
+		renderProject(investment, true, false)
 	}
 
 	section("Past Projects")
+  for _, project := range pastProjects {
+	  renderProject(project, false, true)
+	}
 
 	section("Clients")
 
@@ -365,6 +386,7 @@ func main() {
       o("<div class=card-email>")
 			o(`<a href="mailto:%s@espians.com">%s@espians.com</a>`, p.ID, p.ID)
 			o("</div>")
+		}
 		o("</div>")
 		o("<div class=person-smedia>")
 		o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")
@@ -373,7 +395,6 @@ func main() {
 		o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Skype + ">" + "<img src=http://www.iconsdb.com/icons/download/black/skype-256.png>" + "</a>" + "</div>")
 		o("</div>")
 		o("</div>")
-		}
 	}
 
 	section("Team")

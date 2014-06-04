@@ -241,3 +241,14 @@ module.exports = (api) ->
             marginRight: '90px'
             height: '30px'
             marginTop: '12px'
+
+          '.card-timeline':
+            position: 'relative'
+            height: '450px'
+            width: '300px'
+            backgroundColor: '#f2f2f2'
+            borderBottom: '2px solid #e5e5e6'
+            WebkitTransitionDuration: '500ms'
+            WebkitTransitionProperty: 'border'
+            WebkitTransitionTimingFunction: 'ease-in-out'
+            marginBottom: '40px'
