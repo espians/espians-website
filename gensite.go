@@ -9,6 +9,7 @@ import (
 	"fmt"
 	"os"
 	"strings"
+	"github.com/tav/golly/fsutil"
 )
 
 const (
@@ -65,7 +66,6 @@ var currentProjects = []*Project{
 		GitHub:   "tav/wikihouse-plugin",
 		Twitter:  "wikihouse",
 		Text:     `<a href="http://wikihouse.cc" target="_blank" title="Open source construction set">WikiHouse</a> is an open source construction set that enables anyone to design, download, print and assemble a house. Founded in collaboration with 00:/ Architects, the WikiHouse project now has more than 10 chapters in cities around the World and a <a href="http://www.ted.com/talks/alastair_parvin_architecture_for_the_people_by_the_people" target="_blank" title="Architecture for the people by the people">TED talk</a> with over a million views.`,
-		Image:    "https://www.domusweb.it/content/dam/domusweb/en/architecture/2012/06/19/wikihouse-open-source-housing/big_386814_3418_wikihouse-finali-41.jpg",
 	},
 	{
 		Title:    "WikiFactory",
@@ -338,10 +338,16 @@ func main() {
 	}
 
 	renderProject := func(p *Project, displayCurrent bool, displayPast bool) {
+		id := strings.Replace(strings.ToLower(p.Title), " ", "-", -1)
 		if displayCurrent {
+			imgPath := "gfx/projects/" + id + ".jpg"
 			o("<div class=card>")
 			o("<div class=card-img>")
-			o("<a href=" + p.Link + ">" + "<img src=" + p.Image + ">" + "</a>")
+			if exists, _ := fsutil.Exists("www/" + imgPath); exists {
+				o("<a href=" + p.Link + ">" + "<img src=" + imgPath + ">" + "</a>")
+			} else {
+				o("<a href=" + p.Link + "></a>")
+			}
 			o("</div>")
 			o("<div class=card-text>")
 			o("<h3>" + p.Title + "</h3>")
