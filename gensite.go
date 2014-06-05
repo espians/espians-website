@@ -64,7 +64,7 @@ var currentProjects = []*Project{
 		Facebook: "WikiHouse",
 		GitHub:   "tav/wikihouse-plugin",
 		Twitter:  "wikihouse",
-		Text:     `<a href="http://wikihouse.cc" target="_blank" title="Open source construction set">WikiHouse</a> is an open source construction set that enables anyone to design, download, print and assemble a house. Founded in collaboration with 00:/ Architects, the WikiHouse project now has chapters in X cities around the World and a <a href="http://www.ted.com/talks/alastair_parvin_architecture_for_the_people_by_the_people" target="_blank" title="Architecture for the people by the people">TED talk</a> with over a million views.`,
+		Text:     `<a href="http://wikihouse.cc" target="_blank" title="Open source construction set">WikiHouse</a> is an open source construction set that enables anyone to design, download, print and assemble a house. Founded in collaboration with 00:/ Architects, the WikiHouse project now has more than 10 chapters in cities around the World and a <a href="http://www.ted.com/talks/alastair_parvin_architecture_for_the_people_by_the_people" target="_blank" title="Architecture for the people by the people">TED talk</a> with over a million views.`,
 		Image:    "https://www.domusweb.it/content/dam/domusweb/en/architecture/2012/06/19/wikihouse-open-source-housing/big_386814_3418_wikihouse-finali-41.jpg",
 	},
 	{
@@ -112,14 +112,15 @@ var pastProjects = []*Project{
 	},
 	{
 		Title:    "Civic Crowd",
-		Text:     ``,
+		Text:     `The Civic Crowd aims to map amazing initiatives and ideas for citizen-powered change. It provides an open public domain resource where people can share their projects, discuss ideas, offer their skills, appreciate projects or ideas, propose actions and volunteer to turn proposals into reality.`,
 		Year:     2012,
 		Position: 2,
 	},
 	{
-		Title: "TrustMaps",
-		Text:  ``,
-		Year:  2011,
+		Title:    "TrustMaps",
+		Text:     `Trustmap is a web service for finding people who trust and are trusted. You can use it to build your own trust network and to search other people's trust networks. All the information is publicly available through the web and via our API.`,
+		Year:     2011,
+		Position: 1,
 	},
 	{
 		Title: "OpenCoin",
@@ -314,11 +315,19 @@ func main() {
 
 	o(header)
 	o("<link rel=stylesheet href=" + getPath("style.css") + ">")
-	o("<link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700|Merriweather+Sans:300,400|Montserrat:400,700' rel='stylesheet' type='text/css'>")
+	o("<link href='http://fonts.googleapis.com/css?family=Merriweather:300,400,700|Merriweather+Sans:300,400|Montserrat:400,700' rel='stylesheet' type='text/css'>")
 	o("<div class=wrapper><div id=full-logo>")
 	o("<div class=logo>" + "<img src=http://i61.tinypic.com/ejfyaq.jpg>" + "</div>")
 	o("<h1>ESPIANS</h1>")
-	o("</div></div>")
+  o("</div>")
+	o("<div id=navbar>")
+	o("<ul>")
+	o("<li>" + "<h3>Projects</h3>" + "</li>")
+	o("<li>" + "<h3>People</h3>" + "</li>")
+	o("<li>" + "<h3>Contact</h3>" + "</li>")
+	o("</ul>")
+	o("</div>")
+	o("</div>")
 	o("<div id=network><div class=wrapper id=tagline>" + tagline + "</div>" + "<div class=wrapper id=calltoaction>" + calltoaction + "</div></div>")
 	o("<script src=" + getPath("site.js") + " async></script>")
 	o("<div class=wrapper>")
@@ -373,6 +382,58 @@ func main() {
 					o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=http://www.iconsdb.com/icons/download/black/github-6-512.png>" + "</a>" + "</div>")
 					o("</div>")
 					o("</div>")
+					o("</div>")
+					o("<div id=timeline-divider")
+					o("</div>")
+				} else {
+					o("<div class=card-right>")
+					o("<div class=card-timeline>")
+					o("<div class=card-img>")
+					o("<a href=" + p.Link + ">" + "<img src=" + p.Image + ">" + "</a>")
+					o("</div>")
+					o("<div class=card-text>")
+					o("<h3>" + p.Title + "</h3>")
+					o("<p>" + p.Text + "</p>")
+					o("</div>")
+					o("<div class=card-followus>")
+					o("<p>Follow us:</p>")
+					o("</div>")
+					o("<div class=card-smedia>")
+					o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")
+					o("<div class=icon>" + "<a target=_blank href=https://www.facebook.com/" + p.Facebook + ">" + "<img src=http://www.yanickdery.com/social/facebook-icon.png>" + "</a>" + "</div>")
+					o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=http://www.iconsdb.com/icons/download/black/github-6-512.png>" + "</a>" + "</div>")
+					o("</div>")
+					o("</div>")
+					o("</div>")
+				}
+				o("</div>")
+			}
+			if p.Year == 2011 {
+				o("<div>")
+				if p.Position%2 != 0 {
+					o("<div class=timeline-year>")
+					o("<p>2011</p>")
+					o("</div>")
+					o("<div class=card-left>")
+					o("<div class=card-timeline>")
+					o("<div class=card-img>")
+					o("<a href=" + p.Link + ">" + "<img src=" + p.Image + ">" + "</a>")
+					o("</div>")
+					o("<div class=card-text>")
+					o("<h3>" + p.Title + "</h3>")
+					o("<p>" + p.Text + "</p>")
+					o("</div>")
+					o("<div class=card-followus>")
+					o("<p>Follow us:</p>")
+					o("</div>")
+					o("<div class=card-smedia>")
+					o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")
+					o("<div class=icon>" + "<a target=_blank href=https://www.facebook.com/" + p.Facebook + ">" + "<img src=http://www.yanickdery.com/social/facebook-icon.png>" + "</a>" + "</div>")
+					o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=http://www.iconsdb.com/icons/download/black/github-6-512.png>" + "</a>" + "</div>")
+					o("</div>")
+					o("</div>")
+					o("</div>")
+					o("<div id=timeline-divider")
 					o("</div>")
 				} else {
 					o("<div class=card-right>")
