@@ -14,7 +14,7 @@ module.exports = (api) ->
             background: '#F7F7F7'
             margin: 0
             padding: 0
-            lineHeight: 1.4
+            lineHeight: 1.3
 
         h1:
             fontFamily: 'Montserrat'
@@ -27,7 +27,7 @@ module.exports = (api) ->
             fontFamily: 'Montserrat'
             fontSize: '26px'
             fontWeight: 400
-            lineHeight: 1.4
+            lineHeight: 1.3
             color: '#2b2b2b'
             clear: 'left'
             textAlign: 'center'
@@ -37,7 +37,7 @@ module.exports = (api) ->
             fontFamily:'Merriweather Sans'
             fontSize: '21px'
             fontWeight: 400
-            lineHeight: 1.4
+            lineHeight: 1.3
             marginBottom: 0
 
         p:
@@ -49,8 +49,8 @@ module.exports = (api) ->
 
         a:
             fontFamily: 'Merriweather'
-            fontSize:'12px'
-            fontWeight: 300
+            fontSize:'14px'
+            fontWeight: 400
             color: '#cc0000'
             textDecoration: 'none'
 
@@ -65,6 +65,19 @@ module.exports = (api) ->
             float: 'left'
             marginRight: '5px'
             paddingTop: '3px'
+            paddingBottom: '3px'
+
+        '#navbar':
+            float: 'right'
+            marginTop: '-13px'
+
+        '#navbar>ul>li>h3':
+            fontFamily: 'Montserrat'
+            fontWeight: 400
+            fontSize: '16px'
+            paddingLeft: '10px'
+            paddingRight: '14px'
+            color: '#2b2b2b'
 
         '#network':
             backgroundColor: '#939393'
@@ -182,7 +195,8 @@ module.exports = (api) ->
             marginRight: '20px'
 
          '.card-text>h3':
-            marginBottom: '12px'
+            marginBottom: '8px'
+            marginTop: '14px'
 
          '.card-email':
             marginTop: '12px'
@@ -283,11 +297,12 @@ module.exports = (api) ->
 
           '.timeline-year':
             width: '75px'
-            height: '26px'
+            height: '32px'
             backgroundColor: '##F7F7F7'
             marginLeft: 'auto'
             marginRight: 'auto'
             borderBottom: '2px solid rgba(204,0,0,1)'
+            clear: 'both'
 
           '.timeline-year>p':
             fontFamily: 'Montserrat'
@@ -296,20 +311,28 @@ module.exports = (api) ->
             color: '#2b2b2b'
             textAlign: 'center'
             letterSpacing: '1.2px'
-            paddingTop: '2px'
+            paddingTop: '8px'
+            clear: 'both'
+
+          '#timeline-divider':
+            position: 'absolute'
+            width: '4px'
+            height: '490px'
+            backgroundColor: '#939393'
+            marginLeft: '493px'
+            marginRight: '493px'
+            zIndex: 1
 
           '.card-left':
             float: 'left'
             marginLeft: '128px'
-            paddingRight: '65px'
-            borderRight: '2px solid #939393'
             paddingTop: '15px'
             paddingBottom: '25px'
+            zIndex: 2
 
           '.card-right':
             float: 'right'
             marginRight: '128px'
-            paddingLeft: '65px'
-            borderLeft: '2px solid #939393'
             paddingTop: '15px'
             paddingBottom: '25px'
+            zIndex: 2
