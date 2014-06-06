@@ -7,9 +7,10 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"os"
-	"strings"
 	"github.com/tav/golly/fsutil"
+	"os"
+	"strconv"
+	"strings"
 )
 
 const (
@@ -54,7 +55,7 @@ type Project struct {
 	Twitter  string
 	Text     string
 	Image    string
-	Position int
+	Position string
 }
 
 var currentProjects = []*Project{
@@ -108,73 +109,49 @@ var pastProjects = []*Project{
 		Title:    "Atlas",
 		Text:     ``,
 		Year:     2012,
-		Position: 1,
+		Position: "left",
 	},
 	{
 		Title:    "Civic Crowd",
 		Text:     `The Civic Crowd aims to map amazing initiatives and ideas for citizen-powered change. It provides an open public domain resource where people can share their projects, discuss ideas, offer their skills, appreciate projects or ideas, propose actions and volunteer to turn proposals into reality.`,
 		Year:     2012,
-		Position: 2,
+		Position: "right",
 	},
 	{
 		Title:    "TrustMaps",
 		Text:     `Trustmap is a web service for finding people who trust and are trusted. You can use it to build your own trust network and to search other people's trust networks. All the information is publicly available through the web and via our API.`,
 		Year:     2011,
-		Position: 1,
+		Position: "left",
 	},
 	{
-		Title: "OpenCoin",
-		Text:  ``,
+		Title:    "OpenCoin",
+		Text:     ``,
+		Year:     2007,
+		Position: "left",
 	},
 	{
-		Title: "Efpee Riva",
-		Text:  ``,
+		Title:    "Civic Crowd",
+		Text:     ``,
+		Year:     2006,
+		Position: "left",
 	},
 	{
-		Title: "IceSphere",
-		Link:  "",
-		Text: `One of our first acquihires, Icesphere was a replacement desktop interface
-        for Microsoft Windows. Its powerful block-based component model Python-based IceScript.`,
+		Title:    "Green.tv",
+		Text:     ``,
+		Year:     2006,
+		Position: "right",
 	},
 	{
-		Title: "Civic Crowd",
-		Text:  ``,
-		Year:  2006,
+		Title:    "Hub",
+		Text:     ``,
+		Year:     2005,
+		Position: "left",
 	},
 	{
-		Title: "PlexNews",
-		Text:  `An RSS aggregator of wikis - before `,
-	},
-	{
-		Title: "WorldWideWiki",
-		Text:  `Created to create `,
-	},
-	{
-		Title: "Xnet",
-		Text:  `A programmable wiki built for collaboration. It enabled task management, blogging and team`,
-		Year:  2000,
-	},
-	{
-		Title: "United Diversity",
-		Link:  "http://uniteddiversity.coop/",
-		Text:  ``,
-		Year:  2002,
-	},
-
-	{
-		Title: "Esp Setup",
-		Text:  ``,
-		Year:  2000,
-	},
-	{
-		Title: "Espra File Sharing",
-		Text:  ``,
-		Year:  2000,
-	},
-	{
-		Title: "Advue",
-		Text:  ``,
-		Year:  1999,
+		Title:    "Xnet",
+		Text:     `A programmable wiki built for collaboration. It enabled task management, blogging and team`,
+		Year:     2000,
+		Position: "right",
 	},
 }
 
@@ -319,7 +296,7 @@ func main() {
 	o("<div class=wrapper><div id=full-logo>")
 	o("<div class=logo>" + "<img src=http://i61.tinypic.com/ejfyaq.jpg>" + "</div>")
 	o("<h1>ESPIANS</h1>")
-  o("</div>")
+	o("</div>")
 	o("<div id=navbar>")
 	o("<ul>")
 	o("<li>" + "<h3>Projects</h3>" + "</li>")
@@ -337,18 +314,30 @@ func main() {
 		o("<h2 id=" + id + ">" + title + "</h2>")
 	}
 
-	renderProject := func(p *Project, displayCurrent bool, displayPast bool) {
+	renderCardImage := func(p *Project) {
+		o("<div class=card-img>")
+
 		id := strings.Replace(strings.ToLower(p.Title), " ", "-", -1)
-		if displayCurrent {
-			imgPath := "gfx/projects/" + id + ".jpg"
-			o("<div class=card>")
-			o("<div class=card-img>")
-			if exists, _ := fsutil.Exists("www/" + imgPath); exists {
+		imgPaths := []string{"gfx/projects/" + id + ".jpg", "gfx/projects/" + id + ".png"}
+
+		exists := false
+		for _, imgPath := range imgPaths {
+			if exists, _ = fsutil.Exists("www/" + imgPath); exists {
 				o("<a href=" + p.Link + ">" + "<img src=" + imgPath + ">" + "</a>")
-			} else {
-				o("<a href=" + p.Link + "></a>")
+				break
 			}
-			o("</div>")
+		}
+		if exists == false {
+			o("<a href=" + p.Link + "></a>")
+		}
+		o("</div>")
+	}
+
+	lastYear := 0
+	renderProject := func(p *Project, displayCurrent bool, displayPast bool) {
+		if displayCurrent {
+			o("<div class=card>")
+			renderCardImage(p)
 			o("<div class=card-text>")
 			o("<h3>" + p.Title + "</h3>")
 			o("<p>" + p.Text + "</p>")
@@ -363,107 +352,38 @@ func main() {
 			o("</div>")
 			o("</div>")
 		}
+
 		if displayPast {
-			if p.Year == 2012 {
-				o("<div>")
-				if p.Position%2 != 0 {
-					o("<div class=timeline-year>")
-					o("<p>2012</p>")
-					o("</div>")
-					o("<div class=card-left>")
-					o("<div class=card-timeline>")
-					o("<div class=card-img>")
-					o("<a href=" + p.Link + ">" + "<img src=" + p.Image + ">" + "</a>")
-					o("</div>")
-					o("<div class=card-text>")
-					o("<h3>" + p.Title + "</h3>")
-					o("<p>" + p.Text + "</p>")
-					o("</div>")
-					o("<div class=card-followus>")
-					o("<p>Follow us:</p>")
-					o("</div>")
-					o("<div class=card-smedia>")
-					o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")
-					o("<div class=icon>" + "<a target=_blank href=https://www.facebook.com/" + p.Facebook + ">" + "<img src=http://www.yanickdery.com/social/facebook-icon.png>" + "</a>" + "</div>")
-					o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=http://www.iconsdb.com/icons/download/black/github-6-512.png>" + "</a>" + "</div>")
-					o("</div>")
-					o("</div>")
-					o("</div>")
-					o("<div id=timeline-divider")
-					o("</div>")
-				} else {
-					o("<div class=card-right>")
-					o("<div class=card-timeline>")
-					o("<div class=card-img>")
-					o("<a href=" + p.Link + ">" + "<img src=" + p.Image + ">" + "</a>")
-					o("</div>")
-					o("<div class=card-text>")
-					o("<h3>" + p.Title + "</h3>")
-					o("<p>" + p.Text + "</p>")
-					o("</div>")
-					o("<div class=card-followus>")
-					o("<p>Follow us:</p>")
-					o("</div>")
-					o("<div class=card-smedia>")
-					o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")
-					o("<div class=icon>" + "<a target=_blank href=https://www.facebook.com/" + p.Facebook + ">" + "<img src=http://www.yanickdery.com/social/facebook-icon.png>" + "</a>" + "</div>")
-					o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=http://www.iconsdb.com/icons/download/black/github-6-512.png>" + "</a>" + "</div>")
-					o("</div>")
-					o("</div>")
-					o("</div>")
-				}
+			o("<div>")
+			if p.Year != lastYear {
+				o("<div class=timeline-year>")
+				o("<p>" + strconv.Itoa(p.Year) + "</p>")
 				o("</div>")
 			}
-			if p.Year == 2011 {
-				o("<div>")
-				if p.Position%2 != 0 {
-					o("<div class=timeline-year>")
-					o("<p>2011</p>")
-					o("</div>")
-					o("<div class=card-left>")
-					o("<div class=card-timeline>")
-					o("<div class=card-img>")
-					o("<a href=" + p.Link + ">" + "<img src=" + p.Image + ">" + "</a>")
-					o("</div>")
-					o("<div class=card-text>")
-					o("<h3>" + p.Title + "</h3>")
-					o("<p>" + p.Text + "</p>")
-					o("</div>")
-					o("<div class=card-followus>")
-					o("<p>Follow us:</p>")
-					o("</div>")
-					o("<div class=card-smedia>")
-					o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")
-					o("<div class=icon>" + "<a target=_blank href=https://www.facebook.com/" + p.Facebook + ">" + "<img src=http://www.yanickdery.com/social/facebook-icon.png>" + "</a>" + "</div>")
-					o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=http://www.iconsdb.com/icons/download/black/github-6-512.png>" + "</a>" + "</div>")
-					o("</div>")
-					o("</div>")
-					o("</div>")
-					o("<div id=timeline-divider")
-					o("</div>")
-				} else {
-					o("<div class=card-right>")
-					o("<div class=card-timeline>")
-					o("<div class=card-img>")
-					o("<a href=" + p.Link + ">" + "<img src=" + p.Image + ">" + "</a>")
-					o("</div>")
-					o("<div class=card-text>")
-					o("<h3>" + p.Title + "</h3>")
-					o("<p>" + p.Text + "</p>")
-					o("</div>")
-					o("<div class=card-followus>")
-					o("<p>Follow us:</p>")
-					o("</div>")
-					o("<div class=card-smedia>")
-					o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")
-					o("<div class=icon>" + "<a target=_blank href=https://www.facebook.com/" + p.Facebook + ">" + "<img src=http://www.yanickdery.com/social/facebook-icon.png>" + "</a>" + "</div>")
-					o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=http://www.iconsdb.com/icons/download/black/github-6-512.png>" + "</a>" + "</div>")
-					o("</div>")
-					o("</div>")
-					o("</div>")
-				}
+
+			o("<div class=card-" + p.Position + ">")
+			o("<div class=card-timeline>")
+			renderCardImage(p)
+			o("<div class=card-text>")
+			o("<h3>" + p.Title + "</h3>")
+			o("<p>" + p.Text + "</p>")
+			o("</div>")
+			o("<div class=card-followus>")
+			o("<p>Follow us:</p>")
+			o("</div>")
+			o("<div class=card-smedia>")
+			o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")
+			o("<div class=icon>" + "<a target=_blank href=https://www.facebook.com/" + p.Facebook + ">" + "<img src=http://www.yanickdery.com/social/facebook-icon.png>" + "</a>" + "</div>")
+			o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=http://www.iconsdb.com/icons/download/black/github-6-512.png>" + "</a>" + "</div>")
+			o("</div>")
+			o("</div>")
+			o("</div>")
+			if p.Year != lastYear {
+				o("<div id=timeline-divider")
 				o("</div>")
 			}
+			lastYear = p.Year
+			o("</div>")
 		}
 	}
 

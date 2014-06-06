@@ -29,7 +29,7 @@ module.exports = (api) ->
             fontWeight: 400
             lineHeight: 1.3
             color: '#2b2b2b'
-            clear: 'left'
+            clear: 'both'
             textAlign: 'center'
             marginTop: '40px'
 
