@@ -11,7 +11,7 @@ module.exports = (api) ->
             boxSizing: 'border-box'
 
         body:
-            background: '#F7F7F7'
+            background: '#f9f9f9'
             margin: 0
             padding: 0
             lineHeight: 1.3
@@ -67,22 +67,37 @@ module.exports = (api) ->
             paddingTop: '3px'
             paddingBottom: '3px'
 
-        '#navbar':
-            float: 'right'
-            marginTop: '-13px'
+         header:
+            width: '100%'
+            height: '55px'
+            zIndex: 3000
+            backgroundColor: '#f9f9f9'
+            top: 0
+            left: 0
+            right: 0
+            transition: 'top 0.2s ease-in-out'
+            position: 'fixed'
+            boxShadow: '0 1px 10px rgba(0, 0, 0, 0.1)'
 
-        '#navbar>ul>li>h3':
+        '.nav-up':
+            top: '-55px'
+
+        '#nav':
+            float: 'right'
+
+        '#nav>ul>li>a':
             fontFamily: 'Montserrat'
             fontWeight: 400
             fontSize: '16px'
             paddingLeft: '10px'
             paddingRight: '14px'
             color: '#2b2b2b'
+            cursor: 'pointer'
 
         '#network':
-            backgroundColor: '#939393'
+            backgroundColor: '#878787'
             color: '#ffffff'
-            height: '460px'
+            height: '525px'
             overflow: 'hidden'
             position: 'relative'
             paddingBottom: 0
@@ -116,7 +131,7 @@ module.exports = (api) ->
                 transitionProperty: 'stroke'
 
             '.node':
-                fill: '#939393'
+                fill: '#878787'
                 stroke: '#bbb'
                 transitionDuration: '1s'
                 transitionProperty: 'stroke fill'
@@ -138,7 +153,7 @@ module.exports = (api) ->
             fontWeight: 400
             lineHeight: 1.4
             textShadow: '1px 1px 3px #2b2b2b'
-            marginTop: '170px'
+            marginTop: '225px'
             position: 'relative'
             zIndex: 20
 
@@ -171,16 +186,20 @@ module.exports = (api) ->
             position: 'relative'
             height: '450px'
             width: '300px'
-            backgroundColor: '#f2f2f2'
+            backgroundColor: '#f4f4f4'
             borderBottom: '2px solid #e5e5e6'
+            boxShadow: '0 -2px 10px rgba(0,0,0,0.1)'
             WebkitTransitionDuration: '500ms'
             WebkitTransitionProperty: 'border'
             WebkitTransitionTimingFunction: 'ease-in-out'
             marginBottom: '40px'
-            display: 'inline-block'
             float: 'left'
             marginLeft: '15px'
             marginRight: '15px'
+
+         '.card-centered':
+            float: 'none !important'
+            margin: '0 auto !important'
 
          '.card:hover':
             borderBottom: '2px solid #cc0000'
@@ -188,7 +207,7 @@ module.exports = (api) ->
          '.card-img':
             width: '300px'
             height: '190px'
-            backgroundColor: '#e5e5e6'
+            backgroundColor: 'rgba(255,255,255,0.8)'
 
          '.card-text':
             marginLeft: '20px'
@@ -212,27 +231,6 @@ module.exports = (api) ->
            display: 'inline-block'
            clear: 'left'
 
-         '.card-followus':
-           position: 'absolute'
-           bottom: 0
-           left: 0
-           width: '300px'
-           height: '30px'
-           paddingTop: 0
-           marginTop: 0
-           zIndex: 1
-
-         '.card-followus>p':
-           fontSize: '14px'
-           fontFamily: 'Montserrat'
-           fontWeight: 400
-           marginLeft: '20px'
-           marginTop: '2px'
-           color: '#f2f2f2'
-
-         '.card-followus:hover>p':
-           color: 'rgba(0,0,0,0.5)'
-
          '.card-smedia':
            position: 'absolute'
            bottom: 0
@@ -245,8 +243,10 @@ module.exports = (api) ->
 
          '.icon':
             width: '24px'
-            paddingRight: '4px'
-            float: 'Left'
+            paddingLeft: '4px'
+            marginRight: '6px'
+            marginLeft: '-6px'
+            float: 'right'
             opacity: 0.5
 
           '.icon:hover':
@@ -260,10 +260,13 @@ module.exports = (api) ->
             height: '450px'
             width: '300px'
             marginBottom: '20px'
-            display: 'inline-block'
             float: 'left'
             marginLeft: '15px'
             marginRight: '15px'
+
+          '.person-card-centered':
+             float: 'none !important'
+             margin: '0 auto !important'
 
           '.avatar':
             borderRadius: '50%'
@@ -284,13 +287,19 @@ module.exports = (api) ->
 
           '.card-timeline':
             position: 'relative'
-            height: '450px'
-            width: '300px'
-            backgroundColor: '#f2f2f2'
+            height: '550px'
+            width: '350px'
+            backgroundColor: '#f4f4f4'
             borderBottom: '2px solid #e5e5e6'
+            boxShadow: '0 -1px 10px rgba(0,0,0,0.1)'
             WebkitTransitionDuration: '500ms'
             WebkitTransitionProperty: 'border'
             WebkitTransitionTimingFunction: 'ease-in-out'
+
+          '.timeline-img':
+             width: '350px'
+             height: '190px'
+             backgroundColor: 'rgba(255,255,255,0.8)'
 
           '.card-timeline:hover':
             borderBottom: '2px solid #cc0000'
@@ -317,7 +326,7 @@ module.exports = (api) ->
           '#timeline-divider':
             position: 'absolute'
             width: '4px'
-            height: '490px'
+            height: '590px'
             backgroundColor: '#939393'
             marginLeft: '493px'
             marginRight: '493px'
@@ -325,14 +334,14 @@ module.exports = (api) ->
 
           '.card-left':
             float: 'left'
-            marginLeft: '128px'
+            marginLeft: '103px'
             paddingTop: '15px'
             paddingBottom: '25px'
             zIndex: 2
 
           '.card-right':
             float: 'right'
-            marginRight: '128px'
+            marginRight: '103px'
             paddingTop: '15px'
             paddingBottom: '25px'
             zIndex: 2

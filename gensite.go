@@ -56,6 +56,7 @@ type Project struct {
 	Text     string
 	Image    string
 	Position string
+	Area     string
 }
 
 var currentProjects = []*Project{
@@ -75,7 +76,7 @@ var currentProjects = []*Project{
 		Facebook: "wikifactory",
 		GitHub:   "tav/wikifactory",
 		Twitter:  "wikifactory",
-		Text:     `We are developing an ecosystem to democratise design and production, featuring a community platform, a library of open source designs and an easy-to-use, in-browser design tool.`,
+		Text:     `We are developing <a href="http://www.wikifactory.org" target="_blank" >WikiFactory</a> to enable design and hardware projects to collaborate as effectively as open source software projects. The in-browser, open source platform will feature a library of 3D designs and an easy-to-use design tool so that anyone can create, share and modify designs for digital fabrication.`,
 	},
 	{
 		Title:   "Ampify",
@@ -95,63 +96,91 @@ var investments = []*Project{
 		Facebook: "Wigwamm",
 		GitHub:   "wigwamm",
 		Twitter:  "wigwammco",
-		Text:     ``,
-	},
-	{
-		Title: "Social Startup Labs",
-		Text:  ``,
+		Text:     `Wigwamm is an app for real estate agents and landlords to be able to upload a listing for a new property onto Rightmove/Zoopla/Gumtree within seconds from their smart phone. It allows landlords and vendors to see real-time interest in their property, keeping them informed and in control.`,
 	},
 }
 
 var pastProjects = []*Project{
 
+  {
+	  Title:    "Civic Crowd",
+	  Text:     `<a href="http://www.theciviccrowd.org" target="_blank" title="Community Collaboration Platform">Civic Crowd</a> is community action platform which enables people to map, collaborate and drive positive change in their area.<br><br> It enables people to share their projects, discuss ideas, offer their skills, appreciate projects or ideas, propose actions and volunteer to turn proposals into reality. It also provides community organisers with the tools to manage their projects and crowd source support and funding.<br><br> The platform now also powers the GLA’s <a href="http://www.oi-london.org.uk/view/about" target="_blank" title="Open Institute, powered by Espians Civic Crowd software">Open Institute</a> project.`,
+	  Year:     2012,
+	  Position: "left",
+	  Area:     "Community Crowdsourcing",
+		Facebook: "",
+		GitHub:   "",
+		Twitter:  "TheCivicCrowd",
+  },
 	{
-		Title:    "Atlas",
-		Text:     ``,
-		Year:     2012,
-		Position: "left",
-	},
-	{
-		Title:    "Civic Crowd",
-		Text:     `The Civic Crowd aims to map amazing initiatives and ideas for citizen-powered change. It provides an open public domain resource where people can share their projects, discuss ideas, offer their skills, appreciate projects or ideas, propose actions and volunteer to turn proposals into reality.`,
+		Title:    "Social Startup Labs",
+		Text:     `<a href="http://londoncreativelabs.com/social-startup-labs" target="_blank">Social Startup Labs</a> are standalone, 1-day workshops at which local enterprise ideas are generated and acted upon.<br><br>We partnered with <a href="http://londoncreativelabs.com" target="_blank">London Creative Labs</a> to offer these intense but fun one-day workshops where participants brainstorm, learn, and network with one purpose in mind: to create new businesses that can create work for local people and contribute to sustainable regeneration.<br><br>The events drew a divere range of stakeholders, to effectively identify new opportunities for local value generation.`,
 		Year:     2012,
 		Position: "right",
+		Area:     "Social Business Incubation",
+		Facebook: "LondonCreativeLabs",
+		GitHub:   "",
+		Twitter:  "LonCreativeLabs",
 	},
 	{
-		Title:    "TrustMaps",
-		Text:     `Trustmap is a web service for finding people who trust and are trusted. You can use it to build your own trust network and to search other people's trust networks. All the information is publicly available through the web and via our API.`,
-		Year:     2011,
+		Title:    "TrustMap",
+		Text:     `Building on our earlier concept of trust maps from Xnet, in 2009 we built the <a href="http://http://www.trustmap.org/" target="_blank" title="Reputation Systems Platform">Espra Trustmap</a>, a web service for mapping trust and reputation.<br><br> By utilising <a href="http://www.trustmap.org/api/docs/" target="_blank">APIs</a> and integrating with other ID structures and social networks like Twitter or Facebook, Trustmap allows users to easily build a map of people they trust for specific subjects which enables the delivery of semantically rich data streams, such as search results or incoming stream filtered through your social networks.`,
+		Year:     2009,
 		Position: "left",
-	},
-	{
-		Title:    "OpenCoin",
-		Text:     ``,
-		Year:     2007,
-		Position: "left",
-	},
-	{
-		Title:    "Civic Crowd",
-		Text:     ``,
-		Year:     2006,
-		Position: "left",
+		Area:     "Reputation Systems",
+		Facebook: "",
+		GitHub:   "",
+		Twitter:  "trustmap",
 	},
 	{
 		Title:    "Green.tv",
-		Text:     ``,
+		Text:     `In 2006 we built <a href="http://green.tv/" target="_blank" title="Broadband TV channel for Environmental Films">Green TV</a>, the worlds first online broadband TV channel for environmental content. <br><br> Co-founded with <a href="https://www.linkedin.com/company/large-blue" target="_blank" title="Digital Agency specialised in the sustainability, cultural and clean tech sectors">Large Blue</a> and with support from <a href="http://www.unep.org/Documents.Multilingual/Default.asp?DocumentID=471&ArticleID=5243&l=en" target="_blank" title="United Nations Environment Programme">UNEP</a>, Greenpeace and Friends of the Earth, Green TV still works on the Espians underlying architecture.<br><br> Today it delivers 1/2 million video views a month for media partners including Sony, iTunes, Aol, blinkx and the Huffington Post.`,
 		Year:     2006,
 		Position: "right",
+		Area:     "Video Streaming",
+		Facebook: "greentv",
+		GitHub:   "",
+		Twitter:  "green_tv",
 	},
 	{
 		Title:    "Hub",
-		Text:     ``,
+		Text:     `In 2005 we co-founded the <a href="https://www.impacthub.net/" target="_blank" title="An innovation lab, business Incubator and social enterprise community center">Impact HUB</a>, a network of collaborators and co-working spaces focused on making a positive impact in the world.<br><br> As board members we helped expand the HUB network to 30 countries, managing the technical infrastructure and collaborating on organisational development.<br><br>Today there are over 50 HUBs with over 7000 members on 6 continents.`,
 		Year:     2005,
 		Position: "left",
+		Area:     "Co-Working Spaces",
+		Facebook: "HUBWorld",
+		GitHub:   "",
+		Twitter:  "impacthub",
+	},
+	{
+		Title:    "Espra",
+		Text:     `In 2001 we designed a system called Espra File Sharing, which was built on top of <a href="https://en.wikipedia.org/wiki/Freenet" target="_blank" title="a peer-to-peer platform for censorship-resistant communication">Freenet</a>, as an early P2P anonymous file sharing network.<br><br> Espra provided a fully integrated online media player for all types of music files and a micro-payment feature which allowed members to tip musicians, both extremely novel features in 2001.<br><br> Over 50 artists uploaded their music to the public domain and thousands of pounds flowed through to musicians.`,
+		Year:     2001,
+		Position: "right",
+		Area:     "Gift Economy and Micro-Payments",
+		Facebook: "",
+		GitHub:   "",
+		Twitter:  "",
 	},
 	{
 		Title:    "Xnet",
-		Text:     `A programmable wiki built for collaboration. It enabled task management, blogging and team`,
+		Text:     `Originally conceived in 2000, Xnet is a collaborative decision making and participative budgeting tool that enables open organisations to define their organisational structure, manage project resources, keep up to date with who’s working on what and make intelligent, democratic decisions.<br><br> Discovering Wikis led to a new implementation of Xnet with a more open architecture and greater functionality (incorporating trust maps, jabber, VOIP, etc) as a web based collaboration system used internally between Espians.`,
 		Year:     2000,
+		Position: "left",
+		Area:     "Collaborative Decision Making",
+		Facebook: "",
+		GitHub:   "",
+		Twitter:  "",
+	},
+	{
+		Title:    "OpenCoin",
+		Text:     `Originating as early as 1999, Pecus are an Espian model for an alternative, reputation based currency, which were incorporated into the Xnet project.<br><br> More recently we incorporated much of the thinking behind Pecus into <a href="http://opencoin.org" target="_blank" title="Open Source Electronic Cash">Open Coin</a>, an early open source implementation of Chaum anonymous electronic cash.<br><br> In 2012 we developed the Open Coin crypto currency as a framework, defining open protocols for exchange of electronic cash, and implemented an iOS based <a href="https://github.com/OpenCoin/iWallet" target="_blank" title="Open Coin Client">Wallet</a>.`,
+		Year:     1999,
 		Position: "right",
+		Area:     "Crypto Currencies",
+		Facebook: "",
+		GitHub:   "OpenCoin",
+		Twitter:  "",
 	},
 }
 
@@ -189,6 +218,7 @@ var activeEspians = []*Person{
 	{
 		ID:       "max",
 		Name:     "Maximilian Kampik",
+		GitHub:   "mkampik",
 		LinkedIn: "in/maximiliankampik",
 		Skype:    "maxi.kampik",
 		Twitter:  "mkampik",
@@ -226,23 +256,26 @@ var activeEspians = []*Person{
 }
 
 var advisoryBoard = []*Person{
-	//	{
-	//		ID:       "bauwens",
-	//		Name:     "Michel Bauwens",
-	//		Link:     "http://p2pfoundation.net/Michel_Bauwens/",
-	//		LinkedIn: "in/mbauwens",
-	//		Twitter:  "mbauwens",
-	//	},
 	{
 		ID:       "peitersen",
 		Name:     "Nicolai Peitersen",
+		Text:     `A thinker, doer and entrepreneur for a range of worldwide issues, his latest book ‘The Ethical Economy’ guides a call to build the instruments, institutions, and technologies to realise the democratisation of our economies.`,
 		Link:     "http://www.amazon.co.uk/The-Ethical-Economy-Rebuilding-Crisis/dp/0231152647",
 		LinkedIn: "pub/nicolai-peitersen/0/904/852",
 		Twitter:  "NPeitersen",
 	},
 	{
+		ID:       "bauwens",
+		Name:     "Michel Bauwens",
+		Text:     `Launched numerous tech startups and digital magazines, draws attention to his emerging ‘P2P Theory’ that suggests strategies for political and social change towards a ‘commons-based society’.`,
+		Link:     "http://p2pfoundation.net/Michel_Bauwens/",
+		LinkedIn: "in/mbauwens",
+		Twitter:  "mbauwens",
+	},
+	{
 		ID:      "rheingold",
 		Name:    "Howard Rheingold",
+		Text:     `Best known for his books and talks on the cultural, social and political implications of modern communications and media since the dawn of these technologies. His call is to intelligently use media to realise a collaborative society.`,
 		Link:    "http://rheingold.com/",
 		Twitter: "hrheingold",
 	},
@@ -293,18 +326,19 @@ func main() {
 	o(header)
 	o("<link rel=stylesheet href=" + getPath("style.css") + ">")
 	o("<link href='http://fonts.googleapis.com/css?family=Merriweather:300,400,700|Merriweather+Sans:300,400|Montserrat:400,700' rel='stylesheet' type='text/css'>")
-	o("<div class=wrapper><div id=full-logo>")
+	o("<header class=nav-down><div class=wrapper><div id=full-logo>")
 	o("<div class=logo>" + "<img src=http://i61.tinypic.com/ejfyaq.jpg>" + "</div>")
 	o("<h1>ESPIANS</h1>")
 	o("</div>")
-	o("<div id=navbar>")
+	o("<div id=nav>")
 	o("<ul>")
-	o("<li>" + "<h3>Projects</h3>" + "</li>")
-	o("<li>" + "<h3>People</h3>" + "</li>")
-	o("<li>" + "<h3>Contact</h3>" + "</li>")
+	o("<li>" + "<a href=http://www.espians.com#current-projects>Projects</a>" + "</li>")
+	o("<li>" + "<a href=http://www.espians.com#team>People</a>" + "</li>")
+	o("<li>" + "<a href=http://www.espians.com#contact-us>Contact</a>" + "</li>")
 	o("</ul>")
 	o("</div>")
 	o("</div>")
+	o("</header>")
 	o("<div id=network><div class=wrapper id=tagline>" + tagline + "</div>" + "<div class=wrapper id=calltoaction>" + calltoaction + "</div></div>")
 	o("<script src=" + getPath("site.js") + " async></script>")
 	o("<div class=wrapper>")
@@ -333,22 +367,67 @@ func main() {
 		o("</div>")
 	}
 
+	renderTimelineImage := func(p *Project) {
+		o("<div class=timeline-img>")
+
+		id := strings.Replace(strings.ToLower(p.Title), " ", "-", -1)
+		imgPaths := []string{"gfx/projects/" + id + ".jpg", "gfx/projects/" + id + ".png"}
+
+		exists := false
+		for _, imgPath := range imgPaths {
+			if exists, _ = fsutil.Exists("www/" + imgPath); exists {
+				o("<a href=" + p.Link + ">" + "<img src=" + imgPath + ">" + "</a>")
+				break
+			}
+		}
+		if exists == false {
+			o("<a href=" + p.Link + "></a>")
+		}
+		o("</div>")
+	}
+
+	renderPersonImage := func(p *Person) {
+		o("<div class=person-img>")
+
+		imgPath := []string{"gfx/team/" + p.ID + ".jpg"}
+
+		exists := false
+		for _, imgPath := range imgPath {
+			if exists, _ = fsutil.Exists("www/" + imgPath); exists {
+				o("<a href=" + p.Link + ">" + "<img class=avatar src=" + imgPath + ">" + "</a>")
+				break
+			}
+		}
+		if exists == false {
+			o("<a href=" + p.Link + "></a>")
+		}
+		o("</div>")
+	}
+
+
 	lastYear := 0
-	renderProject := func(p *Project, displayCurrent bool, displayPast bool) {
+	renderProject := func(p *Project, displayCurrent bool, displayPast bool, centered bool) {
 		if displayCurrent {
-			o("<div class=card>")
+			if centered {
+					o("<div class='card card-centered'>")
+			} else {
+					o("<div class=card>")
+			}
 			renderCardImage(p)
 			o("<div class=card-text>")
 			o("<h3>" + p.Title + "</h3>")
 			o("<p>" + p.Text + "</p>")
 			o("</div>")
-			o("<div class=card-followus>")
-			o("<p>Follow us:</p>")
-			o("</div>")
 			o("<div class=card-smedia>")
-			o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")
-			o("<div class=icon>" + "<a target=_blank href=https://www.facebook.com/" + p.Facebook + ">" + "<img src=http://www.yanickdery.com/social/facebook-icon.png>" + "</a>" + "</div>")
-			o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=http://www.iconsdb.com/icons/download/black/github-6-512.png>" + "</a>" + "</div>")
+			if p.GitHub != ""{
+						o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=http://www.iconsdb.com/icons/download/black/github-6-512.png>" + "</a>" + "</div>")
+			}
+			if p.Facebook != ""{
+						o("<div class=icon>" + "<a target=_blank href=https://www.facebook.com/" + p.Facebook + ">" + "<img src=http://www.yanickdery.com/social/facebook-icon.png>" + "</a>" + "</div>")
+			}
+			if p.Twitter != ""{
+				    o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")
+			}
 			o("</div>")
 			o("</div>")
 		}
@@ -363,18 +442,21 @@ func main() {
 
 			o("<div class=card-" + p.Position + ">")
 			o("<div class=card-timeline>")
-			renderCardImage(p)
+			renderTimelineImage(p)
 			o("<div class=card-text>")
-			o("<h3>" + p.Title + "</h3>")
+			o("<h3>" + p.Area + "</h3>")
 			o("<p>" + p.Text + "</p>")
 			o("</div>")
-			o("<div class=card-followus>")
-			o("<p>Follow us:</p>")
-			o("</div>")
 			o("<div class=card-smedia>")
-			o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")
-			o("<div class=icon>" + "<a target=_blank href=https://www.facebook.com/" + p.Facebook + ">" + "<img src=http://www.yanickdery.com/social/facebook-icon.png>" + "</a>" + "</div>")
-			o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=http://www.iconsdb.com/icons/download/black/github-6-512.png>" + "</a>" + "</div>")
+			if p.GitHub != ""{
+						o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=http://www.iconsdb.com/icons/download/black/github-6-512.png>" + "</a>" + "</div>")
+			}
+			if p.Facebook != ""{
+						o("<div class=icon>" + "<a target=_blank href=https://www.facebook.com/" + p.Facebook + ">" + "<img src=http://www.yanickdery.com/social/facebook-icon.png>" + "</a>" + "</div>")
+			}
+			if p.Twitter != ""{
+						o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")
+			}
 			o("</div>")
 			o("</div>")
 			o("</div>")
@@ -389,26 +471,24 @@ func main() {
 
 	section("Current Projects")
 	for _, project := range currentProjects {
-		renderProject(project, true, false)
+		renderProject(project, true, false, false)
 	}
 
 	section("Investments")
 	for _, investment := range investments {
-		renderProject(investment, true, false)
+		renderProject(investment, true, false, true)
 	}
 
-	section("Past Projects")
+	section("Past Projects by Area")
 	for _, project := range pastProjects {
-		renderProject(project, false, true)
+		renderProject(project, false, true, false)
 	}
 
 	section("Clients")
 
 	renderPerson := func(p *Person, displayEmail bool) {
 		o("<div class=person-card>")
-		o("<div class=person-img>")
-		o("<a href=" + p.Link + ">" + "<img class=avatar src=" + p.Image + ">" + "</a>")
-		o("</div>")
+		renderPersonImage(p)
 		o("<div class=card-text>")
 		o("<h3>" + p.Name + "</h3>")
 		o("<p>" + p.Text + "</p>")
@@ -419,10 +499,18 @@ func main() {
 		}
 		o("</div>")
 		o("<div class=person-smedia>")
-		o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")
-		o("<div class=icon>" + "<a target=_blank href=https://www.linkedin.com/" + p.LinkedIn + ">" + "<img src=https://cdn1.iconfinder.com/data/icons/simple-icons/2048/linkedin-2048-black.png>" + "</a>" + "</div>")
-		o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=http://www.iconsdb.com/icons/download/black/github-6-512.png>" + "</a>" + "</div>")
-		o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Skype + ">" + "<img src=http://www.iconsdb.com/icons/download/black/skype-256.png>" + "</a>" + "</div>")
+		if p.Twitter != ""{
+						o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")
+		}
+		if p.Skype != ""{
+			      o("<div class=icon>" + "<a target=_blank href=" + p.Skype + ">" + "<img src=http://www.iconsdb.com/icons/download/black/skype-256.png>" + "</a>" + "</div>")
+		}
+		if p.GitHub != ""{
+			      o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=http://www.iconsdb.com/icons/download/black/github-6-512.png>" + "</a>" + "</div>")
+		}
+		if p.LinkedIn != ""{
+			      o("<div class=icon>" + "<a target=_blank href=https://www.linkedin.com/" + p.LinkedIn + ">" + "<img src=https://cdn1.iconfinder.com/data/icons/simple-icons/2048/linkedin-2048-black.png>" + "</a>" + "</div>")
+		}
 		o("</div>")
 		o("</div>")
 
