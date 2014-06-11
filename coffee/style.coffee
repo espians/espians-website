@@ -15,6 +15,7 @@ module.exports = (api) ->
             margin: 0
             padding: 0
             lineHeight: 1.3
+            paddingTop: '55px'
 
         h1:
             fontFamily: 'Montserrat'
@@ -70,11 +71,9 @@ module.exports = (api) ->
          header:
             width: '100%'
             height: '55px'
-            zIndex: 3000
             backgroundColor: '#f9f9f9'
             top: 0
-            left: 0
-            right: 0
+            zIndex: 3000
             transition: 'top 0.2s ease-in-out'
             position: 'fixed'
             boxShadow: '0 1px 10px rgba(0, 0, 0, 0.1)'

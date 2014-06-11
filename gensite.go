@@ -326,6 +326,7 @@ func main() {
 	o(header)
 	o("<link rel=stylesheet href=" + getPath("style.css") + ">")
 	o("<link href='http://fonts.googleapis.com/css?family=Merriweather:300,400,700|Merriweather+Sans:300,400|Montserrat:400,700' rel='stylesheet' type='text/css'>")
+	o("<script src=" + getPath("site.js") + "></script>")
 	o("<header class=nav-down><div class=wrapper><div id=full-logo>")
 	o("<div class=logo>" + "<img src=http://i61.tinypic.com/ejfyaq.jpg>" + "</div>")
 	o("<h1>ESPIANS</h1>")
