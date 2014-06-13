@@ -7,6 +7,7 @@ generate:
     source:
         - https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.6/d3.js
         - js/nodes.js
+        - js/header.js
         - coffee/site.coffee
 
 - style.css:
