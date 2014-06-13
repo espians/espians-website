@@ -30,9 +30,10 @@ module.exports = (api) ->
             fontWeight: 400
             lineHeight: 1.3
             color: '#2b2b2b'
-            clear: 'both'
             textAlign: 'center'
-            marginTop: '40px'
+            marginTop: '50px'
+            marginBottom: '50px'
+            clear: 'both'
 
         h3:
             fontFamily:'Merriweather Sans'
@@ -54,6 +55,12 @@ module.exports = (api) ->
             fontWeight: 400
             color: '#cc0000'
             textDecoration: 'none'
+
+        'a::selection':
+           color: '#fff'
+
+        '::selection':
+            background: 'rgba(204,0,0,0.7)'
 
         '#full-logo':
             display: 'inline-block'
@@ -93,10 +100,13 @@ module.exports = (api) ->
             color: '#2b2b2b'
             cursor: 'pointer'
 
+        '#nav>ul>li>a:hover':
+            color: '#cc0000'
+
         '#network':
             backgroundColor: '#878787'
             color: '#ffffff'
-            height: '525px'
+            height: '460px'
             overflow: 'hidden'
             position: 'relative'
             paddingBottom: 0
@@ -152,7 +162,7 @@ module.exports = (api) ->
             fontWeight: 400
             lineHeight: 1.4
             textShadow: '1px 1px 3px #2b2b2b'
-            marginTop: '225px'
+            marginTop: '192px'
             position: 'relative'
             zIndex: 20
 
@@ -191,10 +201,10 @@ module.exports = (api) ->
             WebkitTransitionDuration: '500ms'
             WebkitTransitionProperty: 'border'
             WebkitTransitionTimingFunction: 'ease-in-out'
-            marginBottom: '40px'
             float: 'left'
             marginLeft: '15px'
             marginRight: '15px'
+            marginBottom: '50px'
 
          '.card-centered':
             float: 'none !important'
@@ -234,14 +244,15 @@ module.exports = (api) ->
            position: 'absolute'
            bottom: 0
            right: 0
-           width: '85px'
+           marginRight: '3px'
+           width: '120px'
            height: '30px'
            paddingTop: 0
            marginTop: 0
            zIndex: 2
 
          '.icon':
-            width: '24px'
+            width: '23px'
             paddingLeft: '4px'
             marginRight: '6px'
             marginLeft: '-6px'
@@ -251,8 +262,22 @@ module.exports = (api) ->
           '.icon:hover':
             opacity: 1
 
-          '.icon:hover + .card-followus':
-            color: 'rgba(0,0,0,0.5)'
+          '#clients':
+            marginTop: '50px'
+            clear: 'both'
+
+          '.buffer':
+            marginTop: '589px'
+            height: '1px'
+            width: '990px'
+            marginLeft: 'auto'
+            marginRight: 'auto'
+            position: 'relative'
+            backgroundColor: '#f9f9f9'
+
+          '.clients':
+            width: '990px'
+            height: '331px'
 
           '.person-card':
             position: 'relative'
@@ -263,10 +288,6 @@ module.exports = (api) ->
             marginLeft: '15px'
             marginRight: '15px'
 
-          '.person-card-centered':
-             float: 'none !important'
-             margin: '0 auto !important'
-
           '.avatar':
             borderRadius: '50%'
             width: '190px'
@@ -274,15 +295,36 @@ module.exports = (api) ->
             marginLeft: '50px'
             marginRight: '50px'
 
+          '.avatar-advisor':
+            borderRadius: '50%'
+            height: '120px'
+            width: '120px'
+            marginLeft: '85px'
+            marginRight: '85px'
+
           '.person-card>*':
             textAlign: 'center'
 
           '.person-smedia':
-            width: '112px'
-            marginLeft: '98px'
-            marginRight: '90px'
+            width: '120px'
+            marginLeft: 'auto'
+            marginRight: 'auto'
             height: '30px'
             marginTop: '12px'
+
+          '.icon-person':
+            width: '23px'
+            paddingLeft: '4px'
+            marginRight: '6px'
+            marginLeft: '-6px'
+            display: 'inline-block'
+            opacity: 0.5
+
+          '.icon-person:hover':
+            opacity: 1
+
+          '.timeline-sections':
+            height: '622px'
 
           '.card-timeline':
             position: 'relative'
@@ -342,5 +384,6 @@ module.exports = (api) ->
             float: 'right'
             marginRight: '103px'
             paddingTop: '15px'
-            paddingBottom: '25px'
+            marginBottom: '25px'
             zIndex: 2
+            position: 'relative'
