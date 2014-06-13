@@ -57,6 +57,7 @@ type Project struct {
 	Image    string
 	Position string
 	Area     string
+	YouTube  string
 }
 
 var currentProjects = []*Project{
@@ -67,6 +68,7 @@ var currentProjects = []*Project{
 		Facebook: "WikiHouse",
 		GitHub:   "tav/wikihouse-plugin",
 		Twitter:  "wikihouse",
+		YouTube:  "",
 		Text:     `<a href="http://wikihouse.cc" target="_blank" title="Open source construction set">WikiHouse</a> is an open source construction set that enables anyone to design, download, print and assemble a house. Founded in collaboration with 00:/ Architects, the WikiHouse project now has more than 10 chapters in cities around the World and a <a href="http://www.ted.com/talks/alastair_parvin_architecture_for_the_people_by_the_people" target="_blank" title="Architecture for the people by the people">TED talk</a> with over a million views.`,
 	},
 	{
@@ -76,6 +78,7 @@ var currentProjects = []*Project{
 		Facebook: "wikifactory",
 		GitHub:   "tav/wikifactory",
 		Twitter:  "wikifactory",
+		YouTube:   "WikifactoryMovement",
 		Text:     `We are developing <a href="http://www.wikifactory.org" target="_blank" >WikiFactory</a> to enable design and hardware projects to collaborate as effectively as open source software projects. The in-browser, open source platform will feature a library of 3D designs and an easy-to-use design tool so that anyone can create, share and modify designs for digital fabrication.`,
 	},
 	{
@@ -84,6 +87,7 @@ var currentProjects = []*Project{
 		Year:    2001,
 		GitHub:  "tav/ampify",
 		Twitter: "ampify",
+		YouTube: "",
 		Text:    `Set to launch in early 2015, Ampify is an open source, decentralised application platform. It will provide a web-application framework to create social apps on top of a secure, decentralised core.`,
 	},
 }
@@ -96,6 +100,7 @@ var investments = []*Project{
 		Facebook: "Wigwamm",
 		GitHub:   "wigwamm",
 		Twitter:  "wigwammco",
+		YouTube:  "",
 		Text:     `Wigwamm is an app for real estate agents and landlords to be able to upload a listing for a new property onto Rightmove/Zoopla/Gumtree within seconds from their smart phone. It allows landlords and vendors to see real-time interest in their property, keeping them informed and in control.`,
 	},
 }
@@ -111,6 +116,7 @@ var pastProjects = []*Project{
 		Facebook: "",
 		GitHub:   "",
 		Twitter:  "TheCivicCrowd",
+		YouTube:  "",
   },
 	{
 		Title:    "Social Startup Labs",
@@ -121,6 +127,7 @@ var pastProjects = []*Project{
 		Facebook: "LondonCreativeLabs",
 		GitHub:   "",
 		Twitter:  "LonCreativeLabs",
+		YouTube:  "LondonCreativeLabs",
 	},
 	{
 		Title:    "TrustMap",
@@ -131,26 +138,29 @@ var pastProjects = []*Project{
 		Facebook: "",
 		GitHub:   "",
 		Twitter:  "trustmap",
+		YouTube:  "",
 	},
 	{
 		Title:    "Green.tv",
-		Text:     `In 2006 we built <a href="http://green.tv/" target="_blank" title="Broadband TV channel for Environmental Films">Green TV</a>, the worlds first online broadband TV channel for environmental content. <br><br> Co-founded with <a href="https://www.linkedin.com/company/large-blue" target="_blank" title="Digital Agency specialised in the sustainability, cultural and clean tech sectors">Large Blue</a> and with support from <a href="http://www.unep.org/Documents.Multilingual/Default.asp?DocumentID=471&ArticleID=5243&l=en" target="_blank" title="United Nations Environment Programme">UNEP</a>, Greenpeace and Friends of the Earth, Green TV still works on the Espians underlying architecture.<br><br> Today it delivers 1/2 million video views a month for media partners including Sony, iTunes, Aol, blinkx and the Huffington Post.`,
+		Text:     `In 2006 we built <a href="http://green.tv/" target="_blank" title="Broadband TV channel for Environmental Films">Green TV</a>, the worlds first online broadband TV channel for environmental content. <br><br> Co-founded with <a href="https://www.linkedin.com/company/large-blue" target="_blank" title="Digital Agency specialised in the sustainability, cultural and clean tech sectors">Large Blue</a> and with support from <a href="http://www.unep.org/Documents.Multilingual/Default.asp?DocumentID=471&ArticleID=5243&l=en" target="_blank" title="United Nations Environment Programme">UNEP</a>, Greenpeace and Friends of the Earth, Espians built the underlying architecture for the original Green TV platform.<br><br> Today it delivers 1/2 million video views a month for media partners including Sony, iTunes, Aol, blinkx and the Huffington Post.`,
 		Year:     2006,
 		Position: "right",
 		Area:     "Video Streaming",
 		Facebook: "greentv",
 		GitHub:   "",
 		Twitter:  "green_tv",
+		YouTube:  "GreenTV",
 	},
 	{
 		Title:    "Hub",
-		Text:     `In 2005 we co-founded the <a href="https://www.impacthub.net/" target="_blank" title="An innovation lab, business Incubator and social enterprise community center">Impact HUB</a>, a network of collaborators and co-working spaces focused on making a positive impact in the world.<br><br> As board members we helped expand the HUB network to 30 countries, managing the technical infrastructure and collaborating on organisational development.<br><br>Today there are over 50 HUBs with over 7000 members on 6 continents.`,
+		Text:     `In 2005, we joined the original <a href="http://islington.impacthub.net" target="_blank">Impact Hub Islington</a>, a network and co-working space focused on making a positive impact in the world.<br><br>Our members were instrumental in founding the <a href="http://www.impacthub.net/" target="_blank">global network</a> of hubs, managing the technical infrastructure and collaborating on organisational development and most recently, founding the <a href="http://westminster.impacthub.net/" target="_blank">Hub Westminster</a>.<br><br>Today there are over 50 HUBS with over 7000 members on 6 continents.`,
 		Year:     2005,
 		Position: "left",
 		Area:     "Co-Working Spaces",
 		Facebook: "HUBWorld",
 		GitHub:   "",
 		Twitter:  "impacthub",
+		YouTube:  "",
 	},
 	{
 		Title:    "Espra",
@@ -161,6 +171,7 @@ var pastProjects = []*Project{
 		Facebook: "",
 		GitHub:   "",
 		Twitter:  "",
+		YouTube:  "",
 	},
 	{
 		Title:    "Xnet",
@@ -171,6 +182,7 @@ var pastProjects = []*Project{
 		Facebook: "",
 		GitHub:   "",
 		Twitter:  "",
+		YouTube:  "",
 	},
 	{
 		Title:    "OpenCoin",
@@ -180,7 +192,8 @@ var pastProjects = []*Project{
 		Area:     "Crypto Currencies",
 		Facebook: "",
 		GitHub:   "OpenCoin",
-		Twitter:  "",
+		Twitter:  "opencoin",
+		YouTube:  "",
 	},
 }
 
@@ -222,7 +235,7 @@ var activeEspians = []*Person{
 		LinkedIn: "in/maximiliankampik",
 		Skype:    "maxi.kampik",
 		Twitter:  "mkampik",
-		Text:     `Investigative and vocal about the latest technologies and innovations, he’s very fast in converting his passion into web development, business and communications skills.`,
+		Text:     `Aspiring technologist and futurologist that enjoys keeping up with the latest tech innovations and implementations. Has a background in politics and international relations.`,
 		Image:    "https://pbs.twimg.com/profile_images/428915560663904256/LIHeAklZ_400x400.png",
 	},
 	{
@@ -267,7 +280,7 @@ var advisoryBoard = []*Person{
 	{
 		ID:       "bauwens",
 		Name:     "Michel Bauwens",
-		Text:     `Launched numerous tech startups and digital magazines, draws attention to his emerging ‘P2P Theory’ that suggests strategies for political and social change towards a ‘commons-based society’.`,
+		Text:     `Known for having launched numerous tech startups and digital magazines, he now draws attention to his emerging ‘P2P Theory’ that suggests strategies for political and social change towards a ‘commons-based society’.`,
 		Link:     "http://p2pfoundation.net/Michel_Bauwens/",
 		LinkedIn: "in/mbauwens",
 		Twitter:  "mbauwens",
@@ -326,7 +339,7 @@ func main() {
 	o(header)
 	o("<link rel=stylesheet href=" + getPath("style.css") + ">")
 	o("<link href='http://fonts.googleapis.com/css?family=Merriweather:300,400,700|Merriweather+Sans:300,400|Montserrat:400,700' rel='stylesheet' type='text/css'>")
-	o("<script src=" + getPath("site.js") + "></script>")
+	o("<script src=http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js></script>")
 	o("<header class=nav-down><div class=wrapper><div id=full-logo>")
 	o("<div class=logo>" + "<img src=http://i61.tinypic.com/ejfyaq.jpg>" + "</div>")
 	o("<h1>ESPIANS</h1>")
@@ -405,6 +418,24 @@ func main() {
 		o("</div>")
 	}
 
+	renderAdvisorImage := func(p *Person) {
+		o("<div class=person-img>")
+
+		imgPath := []string{"gfx/advisors/" + p.ID + ".jpg"}
+
+		exists := false
+		for _, imgPath := range imgPath {
+			if exists, _ = fsutil.Exists("www/" + imgPath); exists {
+				o("<a href=" + p.Link + ">" + "<img class=avatar-advisor src=" + imgPath + ">" + "</a>")
+				break
+			}
+		}
+		if exists == false {
+			o("<a href=" + p.Link + "></a>")
+		}
+		o("</div>")
+	}
+
 
 	lastYear := 0
 	renderProject := func(p *Project, displayCurrent bool, displayPast bool, centered bool) {
@@ -421,13 +452,16 @@ func main() {
 			o("</div>")
 			o("<div class=card-smedia>")
 			if p.GitHub != ""{
-						o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=http://www.iconsdb.com/icons/download/black/github-6-512.png>" + "</a>" + "</div>")
+						o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=gfx/icons/github.png>" + "</a>" + "</div>")
+			}
+			if p.YouTube != ""{
+				    o("<div class=icon>" + "<a target=_blank href=https://www.youtube.com/user/" + p.YouTube + ">" + "<img src=gfx/icons/youtube.png>" + "</a>" + "</div>")
 			}
 			if p.Facebook != ""{
-						o("<div class=icon>" + "<a target=_blank href=https://www.facebook.com/" + p.Facebook + ">" + "<img src=http://www.yanickdery.com/social/facebook-icon.png>" + "</a>" + "</div>")
+						o("<div class=icon>" + "<a target=_blank href=https://www.facebook.com/" + p.Facebook + ">" + "<img src=gfx/icons/facebook.png>" + "</a>" + "</div>")
 			}
 			if p.Twitter != ""{
-				    o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")
+				    o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=gfx/icons/twitter.png>" + "</a>" + "</div>")
 			}
 			o("</div>")
 			o("</div>")
@@ -450,19 +484,22 @@ func main() {
 			o("</div>")
 			o("<div class=card-smedia>")
 			if p.GitHub != ""{
-						o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=http://www.iconsdb.com/icons/download/black/github-6-512.png>" + "</a>" + "</div>")
+						o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=gfx/icons/github.png>" + "</a>" + "</div>")
+			}
+			if p.YouTube != ""{
+						o("<div class=icon>" + "<a target=_blank href=https://www.youtube.com/user/" + p.YouTube + ">" + "<img src=gfx/icons/youtube.png>" + "</a>" + "</div>")
 			}
 			if p.Facebook != ""{
-						o("<div class=icon>" + "<a target=_blank href=https://www.facebook.com/" + p.Facebook + ">" + "<img src=http://www.yanickdery.com/social/facebook-icon.png>" + "</a>" + "</div>")
+						o("<div class=icon>" + "<a target=_blank href=https://www.facebook.com/" + p.Facebook + ">" + "<img src=gfx/icons/facebook.png>" + "</a>" + "</div>")
 			}
 			if p.Twitter != ""{
-						o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")
+						o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=gfx/icons/twitter.png>" + "</a>" + "</div>")
 			}
 			o("</div>")
 			o("</div>")
 			o("</div>")
 			if p.Year != lastYear {
-				o("<div id=timeline-divider")
+				o("<div id=timeline-divider>")
 				o("</div>")
 			}
 			lastYear = p.Year
@@ -480,16 +517,25 @@ func main() {
 		renderProject(investment, true, false, true)
 	}
 
-	section("Past Projects by Area")
+	section("Selected Past Projects")
 	for _, project := range pastProjects {
 		renderProject(project, false, true, false)
 	}
+	o("<div class=buffer>")
+	o("</div>")
 
 	section("Clients")
+	  o("<div class=clients>")
+		o("<img src=gfx/clients.png></a>")
+		o("</div>")
 
-	renderPerson := func(p *Person, displayEmail bool) {
+	renderPerson := func(p *Person, displayEmail bool, isAdvisor bool) {
 		o("<div class=person-card>")
-		renderPersonImage(p)
+		if isAdvisor == true {
+			renderAdvisorImage(p)
+		} else {
+			renderPersonImage(p)
+		}
 		o("<div class=card-text>")
 		o("<h3>" + p.Name + "</h3>")
 		o("<p>" + p.Text + "</p>")
@@ -501,16 +547,16 @@ func main() {
 		o("</div>")
 		o("<div class=person-smedia>")
 		if p.Twitter != ""{
-						o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=http://aweebitirish.com/wp-content/uploads/2014/03/twitter-logo-png-black.png>" + "</a>" + "</div>")
-		}
-		if p.Skype != ""{
-			      o("<div class=icon>" + "<a target=_blank href=" + p.Skype + ">" + "<img src=http://www.iconsdb.com/icons/download/black/skype-256.png>" + "</a>" + "</div>")
-		}
-		if p.GitHub != ""{
-			      o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=http://www.iconsdb.com/icons/download/black/github-6-512.png>" + "</a>" + "</div>")
+						o("<div class=icon-person>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=gfx/icons/twitter.png>" + "</a>" + "</div>")
 		}
 		if p.LinkedIn != ""{
-			      o("<div class=icon>" + "<a target=_blank href=https://www.linkedin.com/" + p.LinkedIn + ">" + "<img src=https://cdn1.iconfinder.com/data/icons/simple-icons/2048/linkedin-2048-black.png>" + "</a>" + "</div>")
+						o("<div class=icon-person>" + "<a target=_blank href=https://www.linkedin.com/" + p.LinkedIn + ">" + "<img src=gfx/icons/linkedin.png>" + "</a>" + "</div>")
+		}
+		if p.Skype != ""{
+			      o("<div class=icon-person>" + "<a target=_blank href=" + p.Skype + ">" + "<img src=gfx/icons/skype.png>" + "</a>" + "</div>")
+		}
+		if p.GitHub != ""{
+			      o("<div class=icon-person>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=gfx/icons/github.png>" + "</a>" + "</div>")
 		}
 		o("</div>")
 		o("</div>")
@@ -519,12 +565,12 @@ func main() {
 
 	section("Team")
 	for _, espian := range activeEspians {
-		renderPerson(espian, true)
+		renderPerson(espian, true, false)
 	}
 
 	section("Board of Advisors")
 	for _, advisor := range advisoryBoard {
-		renderPerson(advisor, false)
+		renderPerson(advisor, false, true)
 	}
 
 	section("Contact Us")
