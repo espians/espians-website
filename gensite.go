@@ -349,6 +349,10 @@ func main() {
 	o("<li>" + "<a href=http://www.espians.com#current-projects>Projects</a>" + "</li>")
 	o("<li>" + "<a href=http://www.espians.com#team>People</a>" + "</li>")
 	o("<li>" + "<a href=http://www.espians.com#contact-us>Contact</a>" + "</li>")
+	o("<li>" + "<div class=header-smedia>")
+	o("<a target=_blank href=https://twitter.com/espians>" + "<img class=icon-header src=gfx/icons/twitter-esp.png>" + "</a>")
+	o("<a target=_blank href=https://facebook.com/espians>" + "<img class=icon-header id=icon-header-fb src=gfx/icons/facebook-esp.png>" + "</a>")
+	o("</div>")
 	o("</ul>")
 	o("</div>")
 	o("</div>")
@@ -573,8 +577,13 @@ func main() {
 		renderPerson(advisor, false, true)
 	}
 
-	section("Contact Us")
+gmapDirections := "http://maps.google.com/maps?daddr=Impact%20Hub%20Westminster%201st%20floor,%20New%20Zealand%20House%2080%20Haymarket%20London%20SW1Y%204TE@51.50799199999999,-0.131635"
 
+	section("Contact Us")
+	o("<footer>")
+	o(`<a href="%s"><img src="http://maps.googleapis.com/maps/api/staticmap?center=51.507992,-0.131635&zoom=16&size=600x600&markers=color:0xe32000%7C51.507992,-0.131635&style=feature:water%7Csaturation:-100"></a>`, gmapDirections)
+
+  o("</footer>")
 	o("</div>")
 
 	index, err := os.Create("www/index.html")

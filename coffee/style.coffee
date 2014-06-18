@@ -91,6 +91,9 @@ module.exports = (api) ->
         '#nav':
             float: 'right'
 
+        '#nav>ul>li':
+            marginTop: '-3px'
+
         '#nav>ul>li>a':
             fontFamily: 'Montserrat'
             fontWeight: 400
@@ -102,6 +105,25 @@ module.exports = (api) ->
 
         '#nav>ul>li>a:hover':
             color: '#cc0000'
+
+        '.header-smedia':
+            borderLeft: '2px solid #cc0000'
+            zIndex: 3000
+            top: 0
+            clear: 'all'
+            marginTop: '-2px'
+
+        '.icon-header':
+            width: '18px'
+            marginLeft: '12px'
+            marginTop: '5px'
+            opacity: 0.6
+
+        '.icon-header:hover':
+            opacity: 1
+
+        '#icon-header-fb':
+            marginLeft: '4px'
 
         '#network':
             backgroundColor: '#878787'
