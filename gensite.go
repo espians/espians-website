@@ -69,7 +69,7 @@ var currentProjects = []*Project{
 		GitHub:   "tav/wikihouse-plugin",
 		Twitter:  "wikihouse",
 		YouTube:  "",
-		Text:     `<a href="http://wikihouse.cc" target="_blank" title="Open source construction set">WikiHouse</a> is an open source construction set that enables anyone to design, download, print and assemble a house. Founded in collaboration with <a href=http://www.architecture00.net/>Architecture 00</a>, the WikiHouse project now has more than 10 chapters in cities around the world and a <a href="http://www.ted.com/talks/alastair_parvin_architecture_for_the_people_by_the_people" target="_blank" title="Architecture for the people by the people">TED talk</a> with over a million views.`,
+		Text:     `<a href="http://wikihouse.cc" target="_blank" title="open source construction set">WikiHouse</a> is an open source construction set that enables anyone to design, download, print and assemble a house. Founded in collaboration with <a title="riba chartered architectural practice" href=http://www.architecture00.net/>Architecture 00</a>, the WikiHouse project now has more than 10 chapters in cities around the world and a <a href="http://www.ted.com/talks/alastair_parvin_architecture_for_the_people_by_the_people" target="_blank" title="architecture for the people by the people">TED talk</a> with over a million views.`,
 	},
 	{
 		Title:    "WikiFactory",
@@ -79,7 +79,7 @@ var currentProjects = []*Project{
 		GitHub:   "tav/wikifactory",
 		Twitter:  "wikifactory",
 		YouTube:  "WikifactoryMovement",
-		Text:     `We are developing <a href="http://www.wikifactory.org" target="_blank">WikiFactory</a> to enable design and hardware projects to collaborate as effectively as open source software projects. The in-browser, open source platform will feature a library of 3D designs and an easy-to-use design tool so that anyone can create, share and modify designs for digital fabrication.`,
+		Text:     `We are developing <a title="online collaboration platform for open design" href="http://www.wikifactory.org" target="_blank">WikiFactory</a> to enable design and hardware projects to collaborate as effectively as open source software projects. The in-browser, open source platform will feature a library of 3D designs and an easy-to-use design tool so that anyone can create, share and modify designs for digital fabrication.`,
 	},
 	{
 		Title:   "Ampify",
@@ -88,7 +88,7 @@ var currentProjects = []*Project{
 		GitHub:  "tav/ampify",
 		Twitter: "ampify",
 		YouTube: "",
-		Text:    `Set to launch in early 2015, <a href="http://www.ampify.net" target="_blank">Ampify</a> is an open source, decentralised application platform. It will provide a web-application framework to create social apps on top of a secure, decentralised core.`,
+		Text:    `Set to launch in early 2015, <a title="open source decentralised web-application framework" href="http://www.ampify.net" target="_blank">Ampify</a> is an open source, decentralised application platform. It will provide a web-application framework to create social apps on top of a secure, decentralised core.`,
 	},
 }
 
@@ -101,7 +101,7 @@ var investments = []*Project{
 		GitHub:   "wigwamm",
 		Twitter:  "wigwammco",
 		YouTube:  "",
-		Text:     `<a href="http://www.wigwamm.com" target="_blank">Wigwamm</a> is an app for real estate agents and landlords to be able to upload a listing for a new property onto Rightmove/Zoopla/Gumtree within seconds from their smart phone. It allows landlords and vendors to see real-time interest in their property, keeping them informed and in control.`,
+		Text:     `<a title="property listing app" href="http://www.wigwamm.com" target="_blank">Wigwamm</a> is an app for real estate agents and landlords to be able to upload a listing for a new property onto Rightmove/Zoopla/Gumtree within seconds from their smart phone. It allows landlords and vendors to see real-time interest in their property, keeping them informed and in control.`,
 	},
 	{
 		Title:    "OpenDesk",
@@ -111,7 +111,7 @@ var investments = []*Project{
 		GitHub:   "",
 		Twitter:  "open_desk",
 		YouTube:  "",
-		Text:     `<a href="http://www.opendesk.cc" target="_blank">OpenDesk</a> is an online marketplace for local making. It offers a collection of <a href=https://www.opendesk.cc/designs>digitally fabricated furniture</a> by a range of international designers. All designs are open source and can be downloaded by anyone to be made locally and on demand - either by yourself, or by their growing <a href=https://www.opendesk.cc/makers>global network of makers</a>.`,
+		Text:     `<a title="open source furniture" href="http://www.opendesk.cc" target="_blank">OpenDesk</a> is an online marketplace for local making. It offers a collection of <a title="cnc milled furniture" href=https://www.opendesk.cc/designs>digitally fabricated furniture</a> by a range of international designers. All designs are open source and can be downloaded by anyone to be made locally and on demand - either by yourself, or by their growing <a title="distributed manufacturing" href=https://www.opendesk.cc/makers>global network of makers</a>.`,
 	},
 }
 
@@ -119,7 +119,7 @@ var pastProjects = []*Project{
 
 	{
 		Title:    "Civic Crowd",
-		Text:     `<a href="http://www.theciviccrowd.org" target="_blank" title="Community Collaboration Platform">Civic Crowd</a> is a community action platform which enables people to map, collaborate and drive positive change in their area.<br><br>It enables people to share their projects, discuss ideas, offer their skills, appreciate projects, propose actions and volunteer to turn proposals into reality. It also provides community organisers with the tools to manage their projects and crowd source support and funding.<br><br>The platform now also powers the GLA’s <a href="http://www.oi-london.org.uk/view/about" target="_blank" title="Open Institute, powered by Espians Civic Crowd software">Open Institute</a> project.`,
+		Text:     `<a href="http://www.theciviccrowd.org" target="_blank" title="community collaboration platform">Civic Crowd</a> is a community action platform which enables people to map, collaborate and drive positive change in their area.<br><br>It enables people to share their projects, discuss ideas, offer their skills, appreciate projects, propose actions and volunteer to turn proposals into reality. It also provides community organisers with the tools to manage their projects and crowd source support and funding.<br><br>The platform now also powers the GLA’s <a href="http://www.oi-london.org.uk/view/about" target="_blank" title="powered by espians civic crowd software">Open Institute</a> project.`,
 		Year:     2012,
 		Position: "left",
 		Area:     "Community Crowdsourcing",
@@ -130,7 +130,7 @@ var pastProjects = []*Project{
 	},
 	{
 		Title:    "Social Startup Labs",
-		Text:     `<a href="http://londoncreativelabs.com/social-startup-labs" target="_blank">Social Startup Labs</a> are standalone, 1-day workshops at which local enterprise ideas are generated and acted upon.<br><br>We partnered with <a href="http://londoncreativelabs.com" target="_blank">London Creative Labs</a> to offer these intense but fun one-day workshops where participants brainstorm, learn, and network with one purpose in mind: to create new businesses that can create work for local people and contribute to sustainable regeneration.<br><br>The events drew a divere range of stakeholders, to effectively identify new opportunities for local value generation.`,
+		Text:     `<a title="social business incubator" href="http://londoncreativelabs.com/social-startup-labs" target="_blank">Social Startup Labs</a> are standalone, 1-day workshops at which local enterprise ideas are generated and acted upon.<br><br>We partnered with <a href="http://londoncreativelabs.com" target="_blank">London Creative Labs</a> to offer these intense but fun one-day workshops where participants brainstorm, learn, and network with one purpose in mind: to create new businesses that can create work for local people and contribute to sustainable regeneration.<br><br>The events drew a divere range of stakeholders, to effectively identify new opportunities for local value generation.`,
 		Year:     2010,
 		Position: "right",
 		Area:     "Social Business Incubation",
@@ -141,7 +141,7 @@ var pastProjects = []*Project{
 	},
 	{
 		Title:    "TrustMap",
-		Text:     `Building on our earlier concept of trust maps from Xnet, in 2009 we built the <a href="http://http://www.trustmap.org/" target="_blank" title="Reputation Systems Platform">Espra Trustmap</a>, a web service for mapping trust and reputation.<br><br> By utilising <a href="http://www.trustmap.org/api/docs/" target="_blank">APIs</a> and integrating with other ID structures and social networks like Twitter or Facebook, Trustmap allows users to easily build a map of people they trust for specific subjects which enables the delivery of semantically rich data streams, such as search results or incoming stream filtered through your social networks.`,
+		Text:     `Building on our earlier concept of trust maps from Xnet, in 2009 we built the <a href="http://http://www.trustmap.org/" target="_blank" title="reputation systems platform">Espra Trustmap</a>, a web service for mapping trust and reputation.<br><br> By utilising <a title="api documentation" href="http://www.trustmap.org/api/docs/" target="_blank">APIs</a> and integrating with other ID structures and social networks like Twitter or Facebook, Trustmap allows users to easily build a map of people they trust for specific subjects which enables the delivery of semantically rich data streams, such as search results or incoming stream filtered through your social networks.`,
 		Year:     2009,
 		Position: "left",
 		Area:     "Reputation Systems",
@@ -152,7 +152,7 @@ var pastProjects = []*Project{
 	},
 	{
 		Title:    "Green.tv",
-		Text:     `In 2006 we built <a href="http://green.tv/" target="_blank" title="Broadband TV channel for Environmental Films">Green TV</a>, the worlds first online broadband TV channel for environmental content. <br><br> Co-founded with <a href="https://www.linkedin.com/company/large-blue" target="_blank" title="Digital Agency specialised in the sustainability, cultural and clean tech sectors">Large Blue</a> and with support from <a href="http://www.unep.org/Documents.Multilingual/Default.asp?DocumentID=471&ArticleID=5243&l=en" target="_blank" title="United Nations Environment Programme">UNEP</a>, Greenpeace and Friends of the Earth, Espians built the underlying architecture for the original Green TV platform.<br><br> Today it delivers 1/2 million video views a month for media partners including Sony, iTunes, Aol, blinkx and the Huffington Post.`,
+		Text:     `In 2006 we built <a href="http://green.tv/" target="_blank" title="broadband tv channel for environmental films">Green TV</a>, the worlds first online broadband TV channel for environmental content. <br><br> Co-founded with <a href="https://www.linkedin.com/company/large-blue" target="_blank" title="digital agency specialised in the sustainability, cultural and clean tech sectors">Large Blue</a> and with support from <a href="http://www.unep.org/Documents.Multilingual/Default.asp?DocumentID=471&ArticleID=5243&l=en" target="_blank" title="united nations environment programme">UNEP</a>, Greenpeace and Friends of the Earth, Espians built the underlying architecture for the original Green TV platform.<br><br> Today it delivers 1/2 million video views a month for media partners including Sony, iTunes, Aol, blinkx and the Huffington Post.`,
 		Year:     2006,
 		Position: "right",
 		Area:     "Video Streaming",
@@ -163,7 +163,7 @@ var pastProjects = []*Project{
 	},
 	{
 		Title:    "Hub",
-		Text:     `In 2005, we joined the original <a href="http://islington.impacthub.net" target="_blank">Impact Hub Islington</a>, a network and co-working space focused on making a positive impact in the world.<br><br>Our members were instrumental in founding the <a href="http://www.impacthub.net/" target="_blank">global network</a> of hubs, managing the technical infrastructure and collaborating on organisational development and most recently, founding the <a href="http://westminster.impacthub.net/" target="_blank">Hub Westminster</a>.<br><br>Today there are over 50 HUBS with over 7000 members on 6 continents.`,
+		Text:     `In 2005, we joined the original <a title="original impact hub" href="http://islington.impacthub.net" target="_blank">Impact Hub Islington</a>, a network and co-working space focused on making a positive impact in the world.<br><br>Our members were instrumental in founding the <a title="global impact hub network" href="http://www.impacthub.net/" target="_blank">global network</a> of hubs, managing the technical infrastructure and collaborating on organisational development and most recently, founding the <a title="impact hub westminster founded by alice fung" href="http://westminster.impacthub.net/" target="_blank">Hub Westminster</a>.<br><br>Today there are over 50 HUBS with over 7000 members on 6 continents.`,
 		Year:     2005,
 		Position: "left",
 		Area:     "Co-Working Spaces",
@@ -174,7 +174,7 @@ var pastProjects = []*Project{
 	},
 	{
 		Title:    "Espra",
-		Text:     `In 2001 we designed a system called Espra File Sharing, which was built on top of <a href="https://en.wikipedia.org/wiki/Freenet" target="_blank" title="a peer-to-peer platform for censorship-resistant communication">Freenet</a>, as an early P2P anonymous file sharing network.<br><br> Espra provided a fully integrated online media player for all types of music files and a micro-payment feature which allowed members to tip musicians, both extremely novel features in 2001.<br><br> Over 50 artists uploaded their music to the public domain and thousands of pounds flowed through to musicians.`,
+		Text:     `In 2001 we designed a system called Espra File Sharing, which was built on top of <a title="p2p platform for censorship-resistant communication" href="https://en.wikipedia.org/wiki/Freenet" target="_blank" title="a peer-to-peer platform for censorship-resistant communication">Freenet</a>, as an early P2P anonymous file sharing network.<br><br> Espra provided a fully integrated online media player for all types of music files and a micro-payment feature which allowed members to tip musicians, both extremely novel features in 2001.<br><br> Over 50 artists uploaded their music to the public domain and thousands of pounds flowed through to musicians.`,
 		Year:     2001,
 		Position: "right",
 		Area:     "Gift Economy and Micro-Payments",
@@ -196,7 +196,7 @@ var pastProjects = []*Project{
 	},
 	{
 		Title:    "OpenCoin",
-		Text:     `Originating as early as 1999, Pecus are an Espian model for an alternative, reputation based currency, which were incorporated into the Xnet project.<br><br> More recently we incorporated much of the thinking behind Pecus into <a href="http://opencoin.org" target="_blank" title="Open Source Electronic Cash">Open Coin</a>, an early open source implementation of Chaum anonymous electronic cash.<br><br> In 2012 we developed the Open Coin crypto currency as a framework, defining open protocols for exchange of electronic cash, and implemented an iOS based <a href="https://github.com/OpenCoin/iWallet" target="_blank" title="Open Coin Client">Wallet</a>.`,
+		Text:     `Originating as early as 1999, Pecus are an Espian model for an alternative, reputation based currency, which were incorporated into the Xnet project.<br><br> More recently we incorporated much of the thinking behind Pecus into <a href="http://opencoin.org" target="_blank" title="open source electronic cash">Open Coin</a>, an early open source implementation of Chaum anonymous electronic cash.<br><br> In 2012 we developed the Open Coin crypto currency as a framework, defining open protocols for exchange of electronic cash, and implemented an iOS based <a href="https://github.com/OpenCoin/iWallet" target="_blank" title="ios open coin client">Wallet</a>.`,
 		Year:     1999,
 		Position: "right",
 		Area:     "Crypto Currencies",
@@ -366,7 +366,7 @@ func main() {
 	o("</div>")
 	o("</div>")
 	o("</header>")
-	o("<div id=network><div class=wrapper id=tagline>" + tagline + "</div>" + "<div class=wrapper id=calltoaction><a href=#contact-us>" + calltoaction + "</a></div></div>")
+	o("<div id=network><div class=wrapper id=tagline>" + tagline + "</div>" + "</div>")
 	o("<script src=" + getPath("site.js") + " async></script>")
 	o("<div class=wrapper>")
 

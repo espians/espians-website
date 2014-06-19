@@ -206,39 +206,9 @@ module.exports = (api) ->
             fontWeight: 400
             lineHeight: 1.4
             textShadow: '1px 1px 3px #2b2b2b'
-            marginTop: '192px'
+            marginTop: '220px'
             position: 'relative'
             zIndex: 20
-
-        '#calltoaction':
-            WebkitBoxSizing: 'border-box'
-            MozBoxSizing: 'border-box'
-            boxSizing: 'border-box'
-            cursor: 'pointer'
-            backgroundColor: 'rgba(250,250,250,0.6)'
-            position: 'relative'
-            zIndex: 20
-            border: '1px solid #bbb'
-            padding: '4px 10px'
-            textAlign: 'center'
-            marginTop: '40px'
-            marginLeft: 'auto'
-            marginRight: 'auto'
-            width: '180px'
-            height: '50px'
-            WebkitTransitionDuration: '500ms'
-            WebkitTransitionProperty: 'border'
-            WebkitTransitionTimingFunction: 'ease-in-out'
-
-        '#calltoaction:hover':
-            border: '1px solid #cc0000'
-
-        '#calltoaction>a':
-            fontFamily: 'Merriweather Sans'
-            fontSize: '26px'
-            color: '#2b2b2b'
-            fontWeight: 400
-            lineHeight: 1.4
 
         '.card':
             position: 'relative'
@@ -360,7 +330,7 @@ module.exports = (api) ->
 
           '.clients':
             width: '990px'
-            height: '331px'
+            height: '165px'
 
           '.person-card':
             width: '300px'
