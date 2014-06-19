@@ -78,8 +78,8 @@ var currentProjects = []*Project{
 		Facebook: "wikifactory",
 		GitHub:   "tav/wikifactory",
 		Twitter:  "wikifactory",
-		YouTube:   "WikifactoryMovement",
-		Text:     `We are developing <a href="http://www.wikifactory.org" target="_blank" >WikiFactory</a> to enable design and hardware projects to collaborate as effectively as open source software projects. The in-browser, open source platform will feature a library of 3D designs and an easy-to-use design tool so that anyone can create, share and modify designs for digital fabrication.`,
+		YouTube:  "WikifactoryMovement",
+		Text:     `We are developing <a href="http://www.wikifactory.org" target="_blank">WikiFactory</a> to enable design and hardware projects to collaborate as effectively as open source software projects. The in-browser, open source platform will feature a library of 3D designs and an easy-to-use design tool so that anyone can create, share and modify designs for digital fabrication.`,
 	},
 	{
 		Title:   "Ampify",
@@ -88,7 +88,7 @@ var currentProjects = []*Project{
 		GitHub:  "tav/ampify",
 		Twitter: "ampify",
 		YouTube: "",
-		Text:    `Set to launch in early 2015, Ampify is an open source, decentralised application platform. It will provide a web-application framework to create social apps on top of a secure, decentralised core.`,
+		Text:    `Set to launch in early 2015, <a href="http://www.ampify.net" target="_blank">Ampify</a> is an open source, decentralised application platform. It will provide a web-application framework to create social apps on top of a secure, decentralised core.`,
 	},
 }
 
@@ -101,27 +101,37 @@ var investments = []*Project{
 		GitHub:   "wigwamm",
 		Twitter:  "wigwammco",
 		YouTube:  "",
-		Text:     `Wigwamm is an app for real estate agents and landlords to be able to upload a listing for a new property onto Rightmove/Zoopla/Gumtree within seconds from their smart phone. It allows landlords and vendors to see real-time interest in their property, keeping them informed and in control.`,
+		Text:     `<a href="http://www.wigwamm.com" target="_blank">Wigwamm</a> is an app for real estate agents and landlords to be able to upload a listing for a new property onto Rightmove/Zoopla/Gumtree within seconds from their smart phone. It allows landlords and vendors to see real-time interest in their property, keeping them informed and in control.`,
+	},
+	{
+		Title:    "OpenDesk",
+		Link:     "https://opendesk.cc/",
+		Year:     2013,
+		Facebook: "opendesk.cc",
+		GitHub:   "",
+		Twitter:  "open_desk",
+		YouTube:  "",
+		Text:     `<a href="http://www.opendesk.cc" target="_blank">OpenDesk</a> is an online marketplace for local making. It offers a collection of <a href=https://www.opendesk.cc/designs>digitally fabricated furniture</a> by a range of international designers. All designs are open source and can be downloaded by anyone to be made locally and on demand - either by yourself, or by their growing <a href=https://www.opendesk.cc/makers>global network of makers</a>.`,
 	},
 }
 
 var pastProjects = []*Project{
 
-  {
-	  Title:    "Civic Crowd",
-	  Text:     `<a href="http://www.theciviccrowd.org" target="_blank" title="Community Collaboration Platform">Civic Crowd</a> is community action platform which enables people to map, collaborate and drive positive change in their area.<br><br> It enables people to share their projects, discuss ideas, offer their skills, appreciate projects or ideas, propose actions and volunteer to turn proposals into reality. It also provides community organisers with the tools to manage their projects and crowd source support and funding.<br><br> The platform now also powers the GLA’s <a href="http://www.oi-london.org.uk/view/about" target="_blank" title="Open Institute, powered by Espians Civic Crowd software">Open Institute</a> project.`,
-	  Year:     2012,
-	  Position: "left",
-	  Area:     "Community Crowdsourcing",
+	{
+		Title:    "Civic Crowd",
+		Text:     `<a href="http://www.theciviccrowd.org" target="_blank" title="Community Collaboration Platform">Civic Crowd</a> is a community action platform which enables people to map, collaborate and drive positive change in their area.<br><br>It enables people to share their projects, discuss ideas, offer their skills, appreciate projects, propose actions and volunteer to turn proposals into reality. It also provides community organisers with the tools to manage their projects and crowd source support and funding.<br><br>The platform now also powers the GLA’s <a href="http://www.oi-london.org.uk/view/about" target="_blank" title="Open Institute, powered by Espians Civic Crowd software">Open Institute</a> project.`,
+		Year:     2012,
+		Position: "left",
+		Area:     "Community Crowdsourcing",
 		Facebook: "",
 		GitHub:   "",
 		Twitter:  "TheCivicCrowd",
 		YouTube:  "",
-  },
+	},
 	{
 		Title:    "Social Startup Labs",
 		Text:     `<a href="http://londoncreativelabs.com/social-startup-labs" target="_blank">Social Startup Labs</a> are standalone, 1-day workshops at which local enterprise ideas are generated and acted upon.<br><br>We partnered with <a href="http://londoncreativelabs.com" target="_blank">London Creative Labs</a> to offer these intense but fun one-day workshops where participants brainstorm, learn, and network with one purpose in mind: to create new businesses that can create work for local people and contribute to sustainable regeneration.<br><br>The events drew a divere range of stakeholders, to effectively identify new opportunities for local value generation.`,
-		Year:     2012,
+		Year:     2010,
 		Position: "right",
 		Area:     "Social Business Incubation",
 		Facebook: "LondonCreativeLabs",
@@ -192,7 +202,6 @@ var pastProjects = []*Project{
 		Area:     "Crypto Currencies",
 		Facebook: "",
 		GitHub:   "OpenCoin",
-		Twitter:  "opencoin",
 		YouTube:  "",
 	},
 }
@@ -206,7 +215,7 @@ var activeEspians = []*Person{
 		LinkedIn: "in/asktav",
 		Skype:    "tavespian",
 		Twitter:  "tav",
-		Text:     `Systems designer, visionary entrepreneur and aspiring polymath. Spends his time innovating on the cutting edge of social, economic and technological systems.`,
+		Text:     `Systems designer, visionary entrepreneur and aspiring polymath. Spends his time innovating on the cutting edge of social, economic and<br> technological systems.`,
 		Image:    "http://www.moshik.net/admin/App_Upload/Moshik-Hebrew-Typeface-Tav.jpg",
 	},
 	{
@@ -277,18 +286,18 @@ var advisoryBoard = []*Person{
 		LinkedIn: "pub/nicolai-peitersen/0/904/852",
 		Twitter:  "NPeitersen",
 	},
-	{
-		ID:       "bauwens",
-		Name:     "Michel Bauwens",
-		Text:     `Known for having launched numerous tech startups and digital magazines, he now draws attention to his emerging ‘P2P Theory’ that suggests strategies for political and social change towards a ‘commons-based society’.`,
-		Link:     "http://p2pfoundation.net/Michel_Bauwens/",
-		LinkedIn: "in/mbauwens",
-		Twitter:  "mbauwens",
-	},
+	// {
+	// 	ID:       "bauwens",
+	// 	Name:     "Michel Bauwens",
+	// 	Text:     `Known for having launched numerous tech startups and digital magazines, he now draws attention to his emerging ‘P2P Theory’ that suggests strategies for political and social change towards a ‘commons-based society’.`,
+	// 	Link:     "http://p2pfoundation.net/Michel_Bauwens/",
+	// 	LinkedIn: "in/mbauwens",
+	// 	Twitter:  "mbauwens",
+	// },
 	{
 		ID:      "rheingold",
 		Name:    "Howard Rheingold",
-		Text:     `Best known for his books and talks on the cultural, social and political implications of modern communications and media since the dawn of these technologies. His call is to intelligently use media to realise a collaborative society.`,
+		Text:    `Best known for his books and talks on the cultural, social and political implications of modern communications and media since the dawn of these technologies. His call is to intelligently use media to realise a collaborative society.`,
 		Link:    "http://rheingold.com/",
 		Twitter: "hrheingold",
 	},
@@ -357,13 +366,13 @@ func main() {
 	o("</div>")
 	o("</div>")
 	o("</header>")
-	o("<div id=network><div class=wrapper id=tagline>" + tagline + "</div>" + "<div class=wrapper id=calltoaction>" + calltoaction + "</div></div>")
+	o("<div id=network><div class=wrapper id=tagline>" + tagline + "</div>" + "<div class=wrapper id=calltoaction><a href=#contact-us>" + calltoaction + "</a></div></div>")
 	o("<script src=" + getPath("site.js") + " async></script>")
 	o("<div class=wrapper>")
 
 	section := func(title string) {
 		id := strings.Replace(strings.ToLower(title), " ", "-", -1)
-		o("<h2 id=" + id + ">" + title + "</h2>")
+		o("<h2 class=clearfix id=" + id + ">" + title + "</h2>")
 	}
 
 	renderCardImage := func(p *Project) {
@@ -440,14 +449,13 @@ func main() {
 		o("</div>")
 	}
 
-
 	lastYear := 0
-	renderProject := func(p *Project, displayCurrent bool, displayPast bool, centered bool) {
+	renderProject := func(p *Project, displayCurrent bool, displayPast bool, centered bool, next *Project) {
 		if displayCurrent {
 			if centered {
-					o("<div class='card card-centered'>")
+				o("<div class='card card-centered'>")
 			} else {
-					o("<div class=card>")
+				o("<div class=card>")
 			}
 			renderCardImage(p)
 			o("<div class=card-text>")
@@ -455,30 +463,36 @@ func main() {
 			o("<p>" + p.Text + "</p>")
 			o("</div>")
 			o("<div class=card-smedia>")
-			if p.GitHub != ""{
-						o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=gfx/icons/github.png>" + "</a>" + "</div>")
+			if p.GitHub != "" {
+				o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=gfx/icons/github.png>" + "</a>" + "</div>")
 			}
-			if p.YouTube != ""{
-				    o("<div class=icon>" + "<a target=_blank href=https://www.youtube.com/user/" + p.YouTube + ">" + "<img src=gfx/icons/youtube.png>" + "</a>" + "</div>")
+			if p.YouTube != "" {
+				o("<div class=icon>" + "<a target=_blank href=https://www.youtube.com/user/" + p.YouTube + ">" + "<img src=gfx/icons/youtube.png>" + "</a>" + "</div>")
 			}
-			if p.Facebook != ""{
-						o("<div class=icon>" + "<a target=_blank href=https://www.facebook.com/" + p.Facebook + ">" + "<img src=gfx/icons/facebook.png>" + "</a>" + "</div>")
+			if p.Facebook != "" {
+				o("<div class=icon>" + "<a target=_blank href=https://www.facebook.com/" + p.Facebook + ">" + "<img src=gfx/icons/facebook.png>" + "</a>" + "</div>")
 			}
-			if p.Twitter != ""{
-				    o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=gfx/icons/twitter.png>" + "</a>" + "</div>")
+			if p.Twitter != "" {
+				o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=gfx/icons/twitter.png>" + "</a>" + "</div>")
 			}
 			o("</div>")
 			o("</div>")
 		}
 
 		if displayPast {
-			o("<div>")
 			if p.Year != lastYear {
 				o("<div class=timeline-year>")
 				o("<p>" + strconv.Itoa(p.Year) + "</p>")
 				o("</div>")
+				o("<table class=timeline-wrapper cellspacing=0 cellpadding=0 border=0>")
+				o("<tr>")
+				if p.Position == "right" {
+					o("<td class=card-left>&nbsp;</td>")
+					o("<td class=timeline-divider>&nbsp;</td>")
+				}
 			}
 
+			o("<td>")
 			o("<div class=card-" + p.Position + ">")
 			o("<div class=card-timeline>")
 			renderTimelineImage(p)
@@ -487,60 +501,87 @@ func main() {
 			o("<p>" + p.Text + "</p>")
 			o("</div>")
 			o("<div class=card-smedia>")
-			if p.GitHub != ""{
-						o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=gfx/icons/github.png>" + "</a>" + "</div>")
+			if p.GitHub != "" {
+				o("<div class=icon>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=gfx/icons/github.png>" + "</a>" + "</div>")
 			}
-			if p.YouTube != ""{
-						o("<div class=icon>" + "<a target=_blank href=https://www.youtube.com/user/" + p.YouTube + ">" + "<img src=gfx/icons/youtube.png>" + "</a>" + "</div>")
+			if p.YouTube != "" {
+				o("<div class=icon>" + "<a target=_blank href=https://www.youtube.com/user/" + p.YouTube + ">" + "<img src=gfx/icons/youtube.png>" + "</a>" + "</div>")
 			}
-			if p.Facebook != ""{
-						o("<div class=icon>" + "<a target=_blank href=https://www.facebook.com/" + p.Facebook + ">" + "<img src=gfx/icons/facebook.png>" + "</a>" + "</div>")
+			if p.Facebook != "" {
+				o("<div class=icon>" + "<a target=_blank href=https://www.facebook.com/" + p.Facebook + ">" + "<img src=gfx/icons/facebook.png>" + "</a>" + "</div>")
 			}
-			if p.Twitter != ""{
-						o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=gfx/icons/twitter.png>" + "</a>" + "</div>")
+			if p.Twitter != "" {
+				o("<div class=icon>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=gfx/icons/twitter.png>" + "</a>" + "</div>")
 			}
 			o("</div>")
 			o("</div>")
 			o("</div>")
-			if p.Year != lastYear {
-				o("<div id=timeline-divider>")
-				o("</div>")
+			o("</td>")
+			if p.Year != lastYear && p.Position == "left" {
+				o("<td class=timeline-divider>&nbsp;</td>")
+			}
+			if next == nil || next.Year != p.Year {
+				if p.Position == "left" {
+					o("<td class=card-right>&nbsp;</td>")
+				}
+				o("</tr>")
+				o("</table>")
 			}
 			lastYear = p.Year
-			o("</div>")
 		}
 	}
 
 	section("Current Projects")
 	for _, project := range currentProjects {
-		renderProject(project, true, false, false)
+		renderProject(project, true, false, false, nil)
 	}
 
 	section("Investments")
-	for _, investment := range investments {
-		renderProject(investment, true, false, true)
+	centerIdx := -1
+	investmentsLength := len(investments)
+	if investmentsLength%2 == 1 {
+		centerIdx = investmentsLength - 1
 	}
-
-	section("Selected Past Projects")
-	for _, project := range pastProjects {
-		renderProject(project, false, true, false)
+	o("<div class=center-wrapper>")
+	for idx, espian := range investments {
+		if centerIdx == idx {
+			renderProject(espian, true, false, true, nil)
+		} else {
+			renderProject(espian, true, false, false, nil)
+		}
 	}
-	o("<div class=buffer>")
 	o("</div>")
 
-	section("Clients")
-	  o("<div class=clients>")
-		o("<img src=gfx/clients.png></a>")
-		o("</div>")
+	var next *Project
 
-	renderPerson := func(p *Person, displayEmail bool, isAdvisor bool) {
-		o("<div class=person-card>")
+	section("Selected Past Projects")
+	last := len(pastProjects) - 1
+	for idx, project := range pastProjects {
+		if idx < last {
+			next = pastProjects[idx+1]
+		} else {
+			next = nil
+		}
+		renderProject(project, false, true, false, next)
+	}
+	section("Clients")
+	o("<div class=clients>")
+	o("<img src=gfx/clients.png></a>")
+	o("</div>")
+
+	renderPerson := func(p *Person, displayEmail bool, isAdvisor bool, centered bool) {
+		if centered {
+			o("<div class='person-card card-centered'>")
+
+		} else {
+			o("<div class=person-card>")
+		}
 		if isAdvisor == true {
 			renderAdvisorImage(p)
 		} else {
 			renderPersonImage(p)
 		}
-		o("<div class=card-text>")
+		o("<div class=person-text>")
 		o("<h3>" + p.Name + "</h3>")
 		o("<p>" + p.Text + "</p>")
 		if displayEmail {
@@ -550,41 +591,70 @@ func main() {
 		}
 		o("</div>")
 		o("<div class=person-smedia>")
-		if p.Twitter != ""{
-						o("<div class=icon-person>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=gfx/icons/twitter.png>" + "</a>" + "</div>")
+		if p.Twitter != "" {
+			o("<div class=icon-person>" + "<a target=_blank href=http://twitter.com/" + p.Twitter + ">" + "<img src=gfx/icons/twitter.png>" + "</a>" + "</div>")
 		}
-		if p.LinkedIn != ""{
-						o("<div class=icon-person>" + "<a target=_blank href=https://www.linkedin.com/" + p.LinkedIn + ">" + "<img src=gfx/icons/linkedin.png>" + "</a>" + "</div>")
+		if p.LinkedIn != "" {
+			o("<div class=icon-person>" + "<a target=_blank href=https://www.linkedin.com/" + p.LinkedIn + ">" + "<img src=gfx/icons/linkedin.png>" + "</a>" + "</div>")
 		}
-		if p.Skype != ""{
-			      o("<div class=icon-person>" + "<a target=_blank href=" + p.Skype + ">" + "<img src=gfx/icons/skype.png>" + "</a>" + "</div>")
+		if p.Skype != "" {
+			o("<div class=icon-person>" + "<a target=_blank href=" + p.Skype + ">" + "<img src=gfx/icons/skype.png>" + "</a>" + "</div>")
 		}
-		if p.GitHub != ""{
-			      o("<div class=icon-person>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=gfx/icons/github.png>" + "</a>" + "</div>")
+		if p.GitHub != "" {
+			o("<div class=icon-person>" + "<a target=_blank href=https://github.com/" + p.GitHub + ">" + "<img src=gfx/icons/github.png>" + "</a>" + "</div>")
 		}
 		o("</div>")
 		o("</div>")
-
 	}
 
 	section("Team")
-	for _, espian := range activeEspians {
-		renderPerson(espian, true, false)
+	teamLength := len(activeEspians)
+	if (teamLength % 3) == 1 {
+		centerIdx = teamLength - 1
 	}
-
+	for idx, espian := range activeEspians {
+		if centerIdx == idx {
+			renderPerson(espian, true, false, true)
+		} else {
+			renderPerson(espian, true, false, false)
+		}
+	}
 	section("Board of Advisors")
-	for _, advisor := range advisoryBoard {
-		renderPerson(advisor, false, true)
+	advisoryLength := len(advisoryBoard)
+	if advisoryLength%2 == 1 {
+		centerIdx = advisoryLength - 1
 	}
-
-gmapDirections := "http://maps.google.com/maps?daddr=Impact%20Hub%20Westminster%201st%20floor,%20New%20Zealand%20House%2080%20Haymarket%20London%20SW1Y%204TE@51.50799199999999,-0.131635"
-
-	section("Contact Us")
-	o("<footer>")
-	o(`<a href="%s"><img src="http://maps.googleapis.com/maps/api/staticmap?center=51.507992,-0.131635&zoom=16&size=600x600&markers=color:0xe32000%7C51.507992,-0.131635&style=feature:water%7Csaturation:-100"></a>`, gmapDirections)
-
-  o("</footer>")
+	o("<div class=center-wrapper>")
+	for idx, espian := range advisoryBoard {
+		if centerIdx == idx {
+			renderPerson(espian, false, true, true)
+		} else {
+			renderPerson(espian, false, true, false)
+		}
+	}
 	o("</div>")
+	o("</div>")
+
+	gmapDirections := "http://maps.google.com/maps?daddr=Impact%20Hub%20Westminster%201st%20floor,%20New%20Zealand%20House%2080%20Haymarket%20London%20SW1Y%204TE@51.50799199999999,-0.131635"
+
+	o("<footer class=footer-wrapper>")
+	section("Contact Us")
+	o("<div class=contact-wrapper>")
+	o("<div class=contact-text>")
+	o("<h3>Our offices:</h3>")
+	o("<p>Impact Hub Westminster<p><p>New Zealand House</p><p>80 Haymarket</p><p>London SW1Y 4TE</p>")
+	o("<br><br><h3>Get in touch:</h3>")
+	o("<p><a href=mailto:team%s@espians.com>team@espians.com</a></p>")
+	o("<div class=contact-smedia>")
+	o("<a target=_blank href=https://twitter.com/espians>" + "<img class=icon-header src=gfx/icons/twitter-esp.png>" + "</a>")
+	o("<a target=_blank href=https://facebook.com/espians>" + "<img class=icon-header id=icon-header-fb src=gfx/icons/facebook-esp.png>" + "</a>")
+	o("</div>")
+	o("</div>")
+	o("<div class=map")
+	o(`<a href="%s"><img src="http://maps.googleapis.com/maps/api/staticmap?center=51.507992,-0.131635&zoom=16&size=400x400&markers=color:0xe32000%7C51.507992,-0.131635&style=feature:water%7Csaturation:-100" style='width: 400px; height: 400px'></a>`, gmapDirections)
+	o("</div>")
+	o("</div>")
+	o("</footer>")
 
 	index, err := os.Create("www/index.html")
 	if err != nil {
