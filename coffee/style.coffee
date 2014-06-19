@@ -90,6 +90,13 @@ module.exports = (api) ->
             paddingTop: '3px'
             paddingBottom: '3px'
 
+        '.logo>a':
+            fontFamily: 'Montserrat'
+            fontWeight: '400'
+            fontSize: '17px'
+            color: '#2b2b2b'
+            letterSpacing: '0.8px'
+
          header:
             width: '100%'
             height: '55px'
