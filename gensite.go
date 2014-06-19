@@ -69,7 +69,7 @@ var currentProjects = []*Project{
 		GitHub:   "tav/wikihouse-plugin",
 		Twitter:  "wikihouse",
 		YouTube:  "",
-		Text:     `<a href="http://wikihouse.cc" target="_blank" title="Open source construction set">WikiHouse</a> is an open source construction set that enables anyone to design, download, print and assemble a house. Founded in collaboration with 00:/ Architects, the WikiHouse project now has more than 10 chapters in cities around the World and a <a href="http://www.ted.com/talks/alastair_parvin_architecture_for_the_people_by_the_people" target="_blank" title="Architecture for the people by the people">TED talk</a> with over a million views.`,
+		Text:     `<a href="http://wikihouse.cc" target="_blank" title="Open source construction set">WikiHouse</a> is an open source construction set that enables anyone to design, download, print and assemble a house. Founded in collaboration with <a href=http://www.architecture00.net/>Architecture 00</a>, the WikiHouse project now has more than 10 chapters in cities around the world and a <a href="http://www.ted.com/talks/alastair_parvin_architecture_for_the_people_by_the_people" target="_blank" title="Architecture for the people by the people">TED talk</a> with over a million views.`,
 	},
 	{
 		Title:    "WikiFactory",
@@ -350,14 +350,14 @@ func main() {
 	o("<link href='http://fonts.googleapis.com/css?family=Merriweather:300,400,700|Merriweather+Sans:300,400|Montserrat:400,700' rel='stylesheet' type='text/css'>")
 	o("<script src=http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js></script>")
 	o("<header class=nav-down><div class=wrapper><div id=full-logo>")
-	o("<div class=logo>" + "<img src=http://i61.tinypic.com/ejfyaq.jpg>" + "</div>")
-	o("<h1>ESPIANS</h1>")
+	o("<div class=logo><a href=http://espians.com>" + "<img src=http://i61.tinypic.com/ejfyaq.jpg>" + "</a></div>")
+	o("<a href=http://espians.com><h1>ESPIANS</h1></a>")
 	o("</div>")
 	o("<div id=nav>")
 	o("<ul>")
-	o("<li>" + "<a href=http://www.espians.com#current-projects>Projects</a>" + "</li>")
-	o("<li>" + "<a href=http://www.espians.com#team>People</a>" + "</li>")
-	o("<li>" + "<a href=http://www.espians.com#contact-us>Contact</a>" + "</li>")
+	o("<li>" + "<a href=http://espians.com#current-projects>Projects</a>" + "</li>")
+	o("<li>" + "<a href=http://espians.com#team>People</a>" + "</li>")
+	o("<li>" + "<a href=http://espians.com#contact-us>Contact</a>" + "</li>")
 	o("<li>" + "<div class=header-smedia>")
 	o("<a target=_blank href=https://twitter.com/espians>" + "<img class=icon-header src=gfx/icons/twitter-esp.png>" + "</a>")
 	o("<a target=_blank href=https://facebook.com/espians>" + "<img class=icon-header id=icon-header-fb src=gfx/icons/facebook-esp.png>" + "</a>")
@@ -366,7 +366,7 @@ func main() {
 	o("</div>")
 	o("</div>")
 	o("</header>")
-	o("<div id=network><div class=wrapper id=tagline>" + tagline + "</div>" + "<div class=wrapper id=calltoaction><a href=#contact-us>" + calltoaction + "</a></div></div>")
+	o("<div id=network><div class=wrapper id=tagline>" + tagline + "</div>" + "<div class=wrapper id=calltoaction><a href=http://espians.com/#contact-us>" + calltoaction + "</a></div></div>")
 	o("<script src=" + getPath("site.js") + " async></script>")
 	o("<div class=wrapper>")
 
