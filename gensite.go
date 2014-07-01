@@ -119,7 +119,7 @@ var pastProjects = []*Project{
 
 	{
 		Title:    "Civic Crowd",
-		Text:     `<a href="http://www.theciviccrowd.org" target="_blank" title="community collaboration platform">Civic Crowd</a> is a community action platform which enables people to map, collaborate and drive positive change in their area.<br><br>It enables people to share their projects, discuss ideas, offer their skills, appreciate projects, propose actions and volunteer to turn proposals into reality. It also provides community organisers with the tools to manage their projects and crowd source support and funding.<br><br>The platform now also powers the GLA’s <a href="http://www.oi-london.org.uk/view/about" target="_blank" title="powered by espians civic crowd software">Open Institute</a> project.`,
+		Text:     `Built in collaboration with <a title="riba chartered architectural practice" href=http://www.architecture00.net/>Architecture 00</a>, <a href="http://www.theciviccrowd.org" target="_blank" title="community collaboration platform">Civic Crowd</a> is a community action platform which enables people to map, collaborate and drive positive change in their area.<br><br>It enables people to share their projects, discuss ideas, offer their skills, appreciate projects, propose actions and volunteer to turn proposals into reality. It also provides community organisers with the tools to manage their projects and crowd source support and funding.<br><br>The platform now also powers the <a target="_blank" title="greater london authority">Greater London Authority</a>’s <a href="http://www.oi-london.org.uk/view/about" target="_blank" title="powered by espians civic crowd software">Open Institute</a> project.`,
 		Year:     2012,
 		Position: "left",
 		Area:     "Community Crowdsourcing",
