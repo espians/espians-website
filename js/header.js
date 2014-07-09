@@ -36,4 +36,3 @@ function hasScrolled() {
 
     lastScrollTop = st;
 }
-console.log(st)
