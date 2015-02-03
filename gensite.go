@@ -24,7 +24,7 @@ var (
 	header      = `<!doctype html>
 <meta charset=utf-8>
 <title>Espians</title>
-<meta name="thumbnail" content="gfx/icons/espians-logo.png" />
+<meta name="thumbnail" content="http://espians.com/gfx/icons/espians-logo.png" />
 <meta name="description" content="` + tagline + `">
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
