@@ -24,6 +24,7 @@ var (
 	header      = `<!doctype html>
 <meta charset=utf-8>
 <title>Espians</title>
+<meta name="thumbnail" content="gfx/icons/espians-logo.png" />
 <meta name="description" content="` + tagline + `">
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -266,15 +267,6 @@ var activeEspians = []*Person{
 		Text:     `Trained as an architect as well as experienced as a social venture developer, leading her to launch several innovative workspace environments and social innovation incubators.`,
 		Image:    "https://lh3.googleusercontent.com/-o03j_uebeNI/AAAAAAAAAAI/AAAAAAAAAAA/tOM653TY0vo/photo.jpg",
 	},
-	{
-		ID:       "osb",
-		Name:     "Oliver Sylvester-Bradley",
-		LinkedIn: "in/olisb",
-		Skype:    "oli-s-b",
-		Twitter:  "defactodesign",
-		Text:     `Always takes an incisive, refreshing approach to growing ethical brands and startups with his marketing, web and print design, and business development skills.`,
-		Image:    "http://arbores.co.uk/sites/arbores.co.uk/themes/danland/images/oli.png",
-	},
 }
 
 var advisoryBoard = []*Person{
@@ -350,7 +342,7 @@ func main() {
 	o("<link href='http://fonts.googleapis.com/css?family=Merriweather:300,400,700|Merriweather+Sans:300,400|Montserrat:400,700' rel='stylesheet' type='text/css'>")
 	o("<script src=http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js></script>")
 	o("<header class=nav-down><div class=wrapper><div id=full-logo>")
-	o("<div class=logo><a href=http://espians.com>" + "<img src=http://i61.tinypic.com/ejfyaq.jpg>" + "</a></div>")
+	o("<div class=logo><a href=http://espians.com>" + "<img src=gfx/icons/espians-logo.png>" + "</a></div>")
 	o("<a href=http://espians.com><h1>ESPIANS</h1></a>")
 	o("</div>")
 	o("<div id=nav>")

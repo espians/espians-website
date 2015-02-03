@@ -334,7 +334,7 @@ module.exports = (api) ->
 
           '.person-card':
             width: '300px'
-            marginBottom: '20px'
+            marginBottom: '50px'
             float: 'left'
             marginLeft: '15px'
             marginRight: '15px'
